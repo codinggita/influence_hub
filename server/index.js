@@ -2,6 +2,23 @@ const express=require('express')
 const bodyParser = require('body-parser');
 const app=express();
 const port=5000;
+const mongoose=require('mongoose');
+const url='mongodb://localhost:27017/userdata';
+const dbname='practice';
+
+mongoose.connect(url)
+.then(()=>console.log("MongoDb is connected.."))
+.catch((err)=>console.log(err))
+
+const schema=mongoose.Schema;
+
+const userprofile = new schema({
+    username: String,
+    email: String,
+    interests: [String]
+});
+
+const model=mongoose.model('user_profile',userprofile);
 
 app.use(express.json())
 app.use(bodyParser.json());

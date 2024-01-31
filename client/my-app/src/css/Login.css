@@ -1,0 +1,60 @@
+.main-div-7{
+    background-color: beige;
+    height: 120vh;
+    display: flex;
+    justify-content: center;
+}
+
+.login-section{
+    display: flex;
+    justify-items: center;
+    align-items: center;
+}
+
+.login-section form{
+    width: 30vw;
+    padding: 30px;
+    height: 50vh;
+    background-color: rgba(255, 0, 153, 0.712);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid pink;
+    border-radius: 1.2rem;
+}
+
+form input{
+    padding-left: 8px;
+    height: 60px;
+    background: none;
+    color: white;
+    border-bottom: 2px solid white;
+}
+
+form input ::placeholder{
+    color: white;
+}
+
+#rememberme{
+    display: flex;
+    gap: 30px;
+}
+
+#rememberme div{
+    display: flex;
+}
+
+#btn7{
+    width: 220px;
+    border: 2px solid white;
+    color: white;
+}
+
+#btn8{
+    width: 280px;
+    background-color: rgba(255, 255, 255, 0.775);
+    border: 2px solid black;
+    color: black;
+    border-radius: 1.2rem;
+}

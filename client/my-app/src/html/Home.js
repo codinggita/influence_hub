@@ -1,55 +1,46 @@
+import { Button, Stack } from '@mui/material'
+import { useNavigate } from 'react-router-dom';
 import React from 'react'
-import { NavLink } from 'react-router-dom'
 import '../css/Home.css'
 
 function Home() {
+    const navigate=new useNavigate();
     return (
-        <div class="main-div3">
-            <div id="main-div3-div1">
-                <div id="frame1">
-                    <img src='https://images.unsplash.com/photo-1569081156361-c98e05e7f1e4?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8ODh8fG5lb24lMjBWfGVufDB8fDB8fHww' id='imgv'></img>
-                </div>
-                <div id="frame2">
-                        <div id="maindiv3-div1-box1">
-                            <h1 >HIRE THE BEST</h1>
-                        </div>                    
-                        <div id="maindiv3-div1-box2">
-                            <h1>INFLUENCERS FOR YOUR PROMOTON</h1>
-                        </div>
-                        <div id="maindiv3-div1-box3">
-                        <div>
-                            <button id="btn1">HIRE A INFLUENCERS</button>
-                        </div>
-                        <div>
-                            <button id="btn2">HIRE A INFLUENCERS</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div id="main-div3-div2">
+        <div>
+            <div class="main-div-4">
                 <div>
-                    <img src='https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8d29ybGQlMjBpbiUyMG5pZ2h0fGVufDB8fDB8fHww'></img>
+                    <img src="https://images.unsplash.com/photo-1504704911898-68304a7d2807?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OTR8fG5lb24lMjB2fGVufDB8fDB8fHww" alt='error'></img>
+                    <div id="content-1">
+                        <h1>HIRE THE BEST</h1>
+                        <h2>INFLUENCERS FOR YOUR PROMOTIONS</h2>
+                        <Stack spacing={30} direction='row'>
+                            <Button id="btn2" variant="contained" size="large" color='primary' onClick={()=>navigate('/influencer')}>HIRE A INFLUENCER</Button>
+                            <Button id="btn3" variant="outlined" size="large" color='primary' onClick={()=>navigate('/team')}>CONNECT TO TEAMS</Button>
+                        </Stack>
+                    </div>
                 </div>
                 <div>
-                    <h1>TAP INTO A</h1>
-                    <h1><span>GLOBAL NETWORK</span></h1>
-                    <div id="maindiv3-div2-box">
-                    <div id="maindiv3-div2-box1">
-                        <h1>POST YOUR PAGE</h1>
-                        <p>It's free and easy! Start making your collaborations and promote team and businesses.</p>
-                    </div>
-                    <div id="maindiv3-div2-box1">
-                        <h1>CHOOSE YOUR TEAM</h1>
-                        <p></p>
-                    </div>
-                    <div id="maindiv3-div2-box1">
-                        <h1>PAY SAFELY</h1>
-                        <p>Our system protects you every step of the way.</p>
-                    </div>
-                    <div id="maindiv3-div2-box1">
-                        <h1>WE'RE HERE TO HELP</h1>
-                        <p>Your time is precious. let you save your time for searching teams for promotions.</p>
-                    </div>
+                    <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8d29ybGQlMjBpbiUyMG5pZ2h0fGVufDB8fDB8fHww" alt='error'></img>
+                    <div id="content-2">
+                        <h1>TAP INTO A</h1>
+                        <h1><span>GLOBAL NETWORK</span></h1>
+                        <div id="items">
+                            <div id="item-1">
+                                <h1>Post your page</h1>
+                                <p>It's free and easy! Start making your collaborations and promote team and businesses.</p>
+                            </div>
+                            <div id="item-1">
+                                <h1>Choose your team</h1>
+                            </div>
+                            <div id="item-1">
+                                <h1>Pay safely</h1>
+                                <p>Our system protects you every step of the way.</p>
+                            </div>
+                            <div id="item-1">
+                                <h1>We're here to help</h1>
+                                <p>Your time is precious. let you save your time for searching teams for promotions.</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -57,4 +48,5 @@ function Home() {
     )
 }
 
-export default Home
+export default  Home    
+

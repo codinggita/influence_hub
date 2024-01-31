@@ -2,27 +2,30 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import Navbar from './html/Navbar';
-import Footer from './html/Footer';
-import Box1 from './html/Box1';
 import App from './App';
 import {BrowserRouter, createBrowserRouter,NavLink,Route,RouterProvider,Routes} from "react-router-dom";
-import FindInfluencer from './html/FindInfluencer';
-import SignUp from './html/SignUp';
-import Login from './html/Login';
-import FindTeam from './html/FindTeam'
+import Influencer from './html/Influencer';
+import Box_1 from './html/Box_1';
+import Footer from './html/Footer';
 import Home from './html/Home';
+import Features from './html/Features';
+import Team_Guide from './html/Team_Guide';
+import Login  from './html/Login';
+import SignUp from './html/SignUp';
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <BrowserRouter>
   <Navbar/>
-  <Box1/>
+  <Box_1/>
   <Routes>
-    <Route path='/findinfluencers' element={<FindInfluencer/>}></Route>
-    <Route path='/signup' element={<SignUp/>}></Route>
-    <Route path='/login' element={<Login/>}></Route>
-    <Route path='/findteam' element={<FindTeam/>}></Route>
     <Route path='/' element={<Home/>}></Route>
+    <Route path='/influencer' element={<Influencer/>}></Route>
+    <Route path='/features' element={<Features/>}></Route>
+    <Route path='/guide/team' element={<Team_Guide/>}></Route>
+    <Route path='/login' element={<Login/>}></Route>
+    <Route path='signup' element={<SignUp/>}></Route>
   </Routes>
   <Footer/>
 </BrowserRouter>

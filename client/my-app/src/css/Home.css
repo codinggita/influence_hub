@@ -1,14 +1,73 @@
+.main-div-4 img{
+    width: 100%;
+    height: 90vh !important;
+    filter: brightness(.45);
+    position: relative;
+    box-shadow: 5px 5px 10px 0px rgb(0, 0, 0);
+}
 
-span{
+#btn2{
+    height: 70px;
+    background-color: rgb(255, 0, 153);
+    border-radius: 1.4rem;
+}
+
+#btn3{
+    border: 2px solid rgb(255, 0, 153);
+    border-radius: 1.4rem;
+    color: white;
+}
+
+#content-1{
+    position: absolute;
+    color: white;
+    z-index: 10;
+    top: 60%;
+    left: 38%;
+    transform: translate(-50%,-50% );
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 2rem;
+}
+
+#content-1 h2{
+    font-style: italic;
+    border-bottom: 2px solid rgb(255, 255, 255);
     color: rgb(255, 0, 153);
 }
 
-#maindiv3-div2-box1 h1{
-    font-size: larger;
+#content-2{
+    position: absolute;
+    color: white;
+    z-index: 10;
+    top: 160%;
+    left: 38%;
+    transform: translate(-50%,-50% );
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 2rem;
+    font-size: 30px;
 }
 
-#maindiv3-div2-box1{
-    font-size: medium;
-    height: 20vh;
-    width: 30vw;
+#content-2 span{
+    font-style: italic;
+    color: rgb(255, 0, 153);
+    border-bottom: 2px solid rgb(255, 255, 255);
+
+}
+
+#items{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    gap: 20px;
+    font-size: 15px;
+    font-family: cursive;
+}
+
+#items h1{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#item-1{
+    width: 60%;
+    font-size: 15px;
 }

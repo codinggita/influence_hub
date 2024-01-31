@@ -1,0 +1,12 @@
+.main-div-2{
+    padding-left: 80px;
+    padding-right: 80px;
+    height: 10vh;
+    background-color: rgb(23, 23, 23);
+    display: flex;
+    justify-items: center;
+}
+
+.main-div-2 Button{
+    color: white;
+}

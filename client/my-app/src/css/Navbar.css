@@ -1,41 +1,15 @@
-.navbar{
-    padding-left: 50px;
-    padding-right: 50px;
-    height: 13vh;
-    background-color: white;
+.main-div-1{
+    padding-top: 30px;
+    padding-left: 80px;
+    padding-right: 80px;
+    height: 10vh;
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
 }
 
-a{
-    text-decoration: none;
-}
 
-#nav-box-1{
-    width: 50vw;
-    display: flex;
-    position: relative;
-    top: 25%;
-}
-
-#nav-link-1{
-    display: flex;
-    font-weight: 600;
-    gap: 20;
-}
-
-#nav-link-1 NavLink {
-    color: white;
-}
-
-#nav-link-2{
-    display: flex;
-    justify-content: center;
-    position: relative;
-    top: 25%;
-}
-
-#btnpost{
-    height: 20x;
+#btn1 {
+    background-color: rgb(255, 0, 153);
+    color: #fff;
+    font-family: cursive;
 }

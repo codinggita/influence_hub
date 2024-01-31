@@ -1,26 +1,40 @@
 import React from 'react'
-import "../css/Navbar.css"
-import { NavLink } from 'react-router-dom'
+import { Link } from 'react-router-dom';
+import Stack from '@mui/material/Stack';
+import Button from '@mui/material/Button';
+import Avatar from '@mui/material/Avatar';
+import '../css/Navbar.css'
+import { ButtonGroup } from '@mui/material';
+import { createTheme } from "@mui/material/styles";
+import { useNavigate } from 'react-router-dom';
+
 
 function Navbar() {
-  return (
-    <div class="navbar">
-      <div id="nav-box-1">
-        <NavLink to="/">Home</NavLink>
-        <div id="nav-link-1">
-          <NavLink to="/findinfluencers">How It Works</NavLink>
-          <NavLink to="/Features">Features</NavLink>
-          <NavLink to="/influencerslist">Find Influencers</NavLink>
+    const navigate=new useNavigate();
+    return (
+    <div class="main-div-1">
+        <div>
+            <Stack spacing={3} direction="row">
+            <Avatar alt="Remy Sharp" src="/static/images/avatar/1.jpg" />
+                <ButtonGroup variant="text" color='primary' size='large' aria-label="align-button-group">
+                    <Button onClick={()=>navigate('/guide/team')}>HOW IT WORKS</Button>
+                    <Button onClick={()=>navigate('/features')}>FEATURES</Button>
+                    <Button onClick={()=>navigate('/influencer')}>FIND INFLUENCERS</Button>
+                    <Button onClick={()=>navigate('/')}>Home</Button>
+                </ButtonGroup>
+            </Stack>
         </div>
-      </div>    
-      
-      <div id="nav-link-2">
-        <NavLink to="/login">Login</NavLink>
-        <NavLink to="/signup">Sign Up</NavLink>
-        <button id="btnpost">Post Request</button>
-      </div>
+        <div>
+            <Stack spacing={3} direction="row">
+                <ButtonGroup variant="text">
+                    <Button onClick={()=>navigate('/login')}>LOGIN</Button>
+                    <Button onClick={()=>navigate('/signup')}>SINGUP</Button>
+                </ButtonGroup>
+                <Button id="btn1" variant="contained" size="large" color='primary'>Post Request</Button>
+            </Stack>
+        </div>
     </div>
-  )
+    )
 }
 
 export default Navbar

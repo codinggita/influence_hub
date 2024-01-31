@@ -1,19 +1,33 @@
 import React from 'react'
+import { Button } from '@mui/material';
+import { useNavigate } from 'react-router-dom';
+import FormControlLabel from '@mui/material/FormControlLabel';
+import Checkbox from '@mui/material/Checkbox';
+import '../css/SignUp.css'
+
 
 function SignUp() {
+    const navigate=new useNavigate();
     return (
-        <div class="signup">
-            <form>
-                <label id="username">Username</label>
-                <input type="text" id="username" name="username" required></input>
-                <label id="email">Email</label>
-                <input type="email" id="email" name="email" required></input>
-                <label id="password">Password</label>
-                <input type="password" id="password" name="password" required></input>
-                <button>SignUp</button>
-            </form>
+        <div class="main-div-7" >
+            <div class="signup-section">
+                <form id="main-div-7">
+                    <input type='text' placeholder='Username'></input>
+                    <input type='text' placeholder='Email'></input>
+                    <input type='text' placeholder='Password'></input>
+                    <div id="terms">
+                        <Checkbox />
+                        <p>I agree to the Influencer Hub <span>User Agreement</span> and <span>Privacy Policy</span></p>
+                    </div>
+                    <Button id="btn7" variant='outlined' onClick={()=>navigate('/')}>Register</Button>
+                    <div>
+                    <p>Already have an account ?</p>
+                    <Button id="btn8" variant='contained' onClick={()=>navigate('/login')}>Login</Button>
+                    </div>
+                </form>
+            </div>
         </div>
     )
 }
 
-export default SignUp
+export default  SignUp   

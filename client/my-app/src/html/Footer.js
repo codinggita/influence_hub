@@ -1,37 +1,36 @@
 import React from 'react'
-import { NavLink } from 'react-router-dom'
 import '../css/Footer.css'
+import { useNavigate } from 'react-router-dom';
+import { Button, Stack } from '@mui/material';
 
 function Footer() {
+    const navigate=new useNavigate();
     return (
-        <div class="mainbox2">
-            <div id="div1">
-                <h1>Influencer Hub</h1>
-                {/* <NavLink to="/">Categories</NavLink> */}
-                <p>Categories</p>
-                {/* <NavLink to="/">Features</NavLink> */}
-                <p>Features</p>
-                {/* <NavLink to="/">Program</NavLink> */}
-                <p>Program</p>
-            </div>
-            <div id="div2">
-                <h1>About</h1>
-                {/* <NavLink to="/">About Us</NavLink> */}
-                <p>About Us</p>
-                {/* <NavLink to="/findinfluencers">How it works</NavLink> */}
-                <p>How it works</p>
-                {/* <NavLink to="/">Teams</NavLink> */}
-                <p>Teams</p>
-                {/* <NavLink to="/">Influencers</NavLink> */}
-                <p>Influencers</p>
-                {/* <NavLink to="/">Contact</NavLink> */}
-                <p>Contact</p>
-            </div>
-            <div id="div3">
-                <h1>Logos and links</h1>
+        <div>
+            <div class="main-div-3">
+                <div>
+                    <Stack varient='text' size='larger'>
+                        <h1>Influencer Hub</h1>
+                        <Button onClick={()=>navigate('/category')}>Categories</Button>
+                        <Button onClick={()=>navigate('/features')}>Features</Button>
+                        <Button onClick={()=>navigate('/programs')}>Programs</Button>
+                    </Stack>
+                </div>
+                <div>
+                    <h1>Influencer Hub</h1>
+                    <Stack varient='text' size='larger'>
+                        <Button onClick={()=>navigate('/about')}>About Us</Button>
+                        <Button onClick={()=>navigate('/influencers')}>How it works</Button>
+                        <Button onClick={()=>navigate('/team')}>Team</Button>
+                        <Button onClick={()=>navigate('/contact')}>Contact</Button>
+                    </Stack>
+                </div>
+                <div>
+                    <h1>Logos and links</h1>
+                </div>
             </div>
         </div>
-        )
+    )
 }
 
-export default  Footer
+export default Footer

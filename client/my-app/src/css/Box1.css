@@ -1,9 +1,18 @@
 .div1{
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 15px;
+    height: 8vh;
     background-color: rgb(19, 18, 19);
-    color: rgb(255, 255, 255);
-    text-decoration: none;
+}
+
+.div1 div{
+    display: flex;
+    justify-content: space-between;
+    width: 30%;
 }
 
 .div1 a {
     color: white;
 }
+

@@ -8,22 +8,16 @@ function Navbar() {
       <div id="nav-box-1">
         <NavLink to="/">Home</NavLink>
         <div id="nav-link-1">
-          <div>
-          <NavLink to="/working">How It Works</NavLink>
-          </div>
-          <div>
-          <NavLink to="Features">Features</NavLink>
-          </div>
-          <div>
-          <NavLink to="find-influencers">Find Influencers</NavLink>
-          </div>
+          <NavLink to="/findinfluencers">How It Works</NavLink>
+          <NavLink to="/Features">Features</NavLink>
+          <NavLink to="/influencerslist">Find Influencers</NavLink>
         </div>
       </div>    
       
       <div id="nav-link-2">
-        <a href="">Login</a>
-        <a href="">Sign Up</a>
-        <button>Post Request</button>
+        <NavLink to="/login">Login</NavLink>
+        <NavLink to="/signup">Sign Up</NavLink>
+        <button id="btnpost">Post Request</button>
       </div>
     </div>
   )

@@ -17,7 +17,7 @@ function Navbar() {
             <Stack spacing={3} direction="row">
             <Avatar alt="Remy Sharp" src="/static/images/avatar/1.jpg" />
                 <ButtonGroup variant="text" color='primary' size='large' aria-label="align-button-group">
-                    <Button onClick={()=>navigate('/guide/team')}>HOW IT WORKS</Button>
+                    <Button onClick={()=>navigate('/guide')}>HOW IT WORKS</Button>
                     <Button onClick={()=>navigate('/features')}>FEATURES</Button>
                     <Button onClick={()=>navigate('/influencer')}>FIND INFLUENCERS</Button>
                     <Button onClick={()=>navigate('/')}>Home</Button>

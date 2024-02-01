@@ -1,0 +1,73 @@
+#content-4{
+    /* padding-left: 80px;
+    padding-right: 50px; */
+    display: flex;
+    justify-items: center;
+    justify-content: space-between;
+}
+
+#content-4 #div-1{
+    background-image: url(../phone\ frame.jpg) ;
+    background-size: 100% 100%;
+    background-position: center;
+    margin-top: 100px;
+    margin-left: 130px;
+    height: 76vh;
+    width: 26vw;
+    border-radius: 3rem;
+    box-shadow: 5px 5px 10px 0px rgb(0, 0, 0);
+}
+
+#content-4 #div-2{
+    height: 100vh;
+    width: 50%;
+    background-color: rgba(250, 235, 215, 0.308);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 5px 5px 10px 0px rgb(0, 0, 0);
+
+}
+
+#content-4 #div-2 Button{
+    margin-top: 40px;
+    background-color: rgb(255,0,153);
+    font-family: cursive;
+    width: 140px;
+    height: 60px;
+    border-radius: .8rem;
+    box-shadow: 5px 5px 10px 0px rgb(0, 0, 0);
+}
+
+#content-4 #div-2 div{
+    padding: 20px;
+    width: 24vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: .6rem;
+    box-shadow: 5px 5px 10px 0px rgb(0, 0, 0);
+    font-family: cursive;
+}
+
+#chat{
+    margin-top: 40px;
+    margin-left: 9px;
+    height: 69.6vh !important;
+    width: 24.1vw;
+    border-top-left-radius: 0.4rem;
+    border-top-right-radius: 0.4rem;
+    border-bottom-left-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+    filter: brightness(1);
+}
+
+.main-div-4 #content-1 p{
+    font-family: cursive;
+}
+
+.main-div-4 #content-1 h1{
+    color: rgba(255, 0, 153, 0.733);
+    font-weight: 500;
+}

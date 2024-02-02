@@ -105,6 +105,7 @@ form input{
     height: 15vh;
 }
 
+
 #info{
     display: grid;
     grid-template-columns: repeat(2,20fr);

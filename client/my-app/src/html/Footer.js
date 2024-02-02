@@ -20,7 +20,7 @@ function Footer() {
                     <h1>Influencer Hub</h1>
                     <Stack varient='text' size='larger'>
                         <Button onClick={()=>navigate('/about')}>About Us</Button>
-                        <Button onClick={()=>navigate('/influencers')}>How it works</Button>
+                        <Button onClick={()=>navigate('/guide')}>How it works</Button>
                         <Button onClick={()=>navigate('/team')}>Team</Button>
                         <Button onClick={()=>navigate('/contact')}>Contact</Button>
                     </Stack>

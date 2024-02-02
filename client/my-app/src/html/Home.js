@@ -2,11 +2,13 @@ import { Button, Stack } from '@mui/material'
 import { useNavigate } from 'react-router-dom';
 import React from 'react'
 import '../css/Home.css'
+import Box_1 from './Box_1';
 
 function Home() {
     const navigate=new useNavigate();
     return (
         <div>
+            <Box_1/>
             <div class="main-div-4">
                 <div>
                     <img src="https://images.unsplash.com/photo-1504704911898-68304a7d2807?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OTR8fG5lb24lMjB2fGVufDB8fDB8fHww" alt='error'></img>

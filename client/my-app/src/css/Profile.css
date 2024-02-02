@@ -2,6 +2,7 @@
     background-image: url(https://images.unsplash.com/photo-1546640646-89b557854b23?q=80&w=1738&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
     background-repeat: no-repeat;
     background-size: 81rem 40rem;
+    background-color: black;
 }
 
 .main-content-5 {
@@ -14,14 +15,18 @@
     margin-top: 40vh;
     margin-left: 20vh;
     margin-bottom: 20vh;
-    background-color: rgba(215, 242, 250, 0.389);
+    background-color: rgba(215, 242, 250, 0.116);
     height: 80vh;
     width: 50vw;
     display: flex;
     flex-direction: column;
     align-items: center;
     border-radius: .6rem;
-    box-shadow: 5px 5px 10px 0px rgb(0, 0, 0);
+    border-top: 1px solid white;
+    box-shadow: 5px 5px 10px 0px rgb(255, 255, 255);
+    color: white;
+    font-style: italic;
+    font-family: cursive;
 }
 
 #profile-photo{
@@ -41,43 +46,48 @@
 
 
 #review{
-    background-color: white;
     box-shadow: 5px 5px 10px 0px rgb(0, 0, 0);
-    background-color: rgba(234, 215, 250, 0.403);
+    background-color: rgba(255, 255, 255, 0.184);
     border-radius: .6rem;
     height: 20vh;
     display: flex;
     justify-content: center;
-    box-shadow: 5px 5px 10px 0px rgb(0, 0, 0);
+    border-top: 1px solid white;
+    box-shadow: 5px 5px 10px 0px rgb(255, 255, 255);
+    color: white;
+    font-style: italic;
+    font-family: cursive;
 }
 
 #chat-box{
-    /* background-color: white; */
-    box-shadow: 5px 5px 10px 0px rgb(0, 0, 0);
-    background-color: rgba(234, 215, 250, 0.403);
+    border-top: 1px solid white;
+    box-shadow: 5px 5px 10px 0px rgba(255, 255, 255, 0.803);
+    background-color: rgba(234, 215, 250, 0.168);
     margin-top: 5vh;
     margin-bottom: 15vh;
     border-radius: .6rem;
     display: flex;
     flex-direction: column;
     align-items: center;
+    color: white;
+    font-family: cursive;
+    font-style: italic;
+    box-shadow: 5px 5px 10px 0px rgb(255, 255, 255);    
+    transition: box-shadow 10s;
 }
 
+#chat-box :hover{
+    transform: scale(1.1);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+}
 
 #chat-box #chats {
     background-color: rgba(0, 0, 0, 0.127);
-    color: brown;
+    color: rgb(255, 255, 255);
     border: 1px solid #ccc;
     padding: 10px;
     margin: 10px;
+    margin-bottom: 20px;
     border-radius: 8px;
-    overflow: hidden;
-    transition: box-shadow 10s;
-    /* Initial styling */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Box-shadow to create the outside effect */
 }
 
-#chat-box #chats :hover{
-    transform: scale(1.1);
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-}

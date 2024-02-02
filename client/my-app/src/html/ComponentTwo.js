@@ -1,5 +1,3 @@
-// ComponentTwo.js
-
 import { Button, Stack } from '@mui/material';
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
@@ -17,12 +15,6 @@ const ComponentTwo = () => {
                         <h1>What kind of work can I do?</h1>
                         <p>Whatever the field ,you can find the best promotional teams.Complete your profile so we can match you to the right team.</p>
                         <Button id="btn2" variant="contained" size="large" color='primary' onClick={()=>navigate('/team')}>FIND TEAM</Button>
-                        {/* <h1>HIRE THE BEST</h1>
-                        <h2>INFLUENCERS FOR YOUR PROMOTIONS</h2>
-                        <Stack spacing={30} direction='row'>
-                            <Button id="btn2" variant="contained" size="large" color='primary' onClick={()=>navigate('/influencer')}>HIRE A INFLUENCER</Button>
-                            <Button id="btn3" variant="outlined" size="large" color='primary' onClick={()=>navigate('/team')}>CONNECT TO TEAMS</Button>
-                        </Stack> */}
                     </div>
                 </div>
                 <div>

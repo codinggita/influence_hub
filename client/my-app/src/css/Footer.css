@@ -13,3 +13,18 @@
     font-family: cursive;
     color: white;
 }
+
+.footer-copyright{    
+    padding-left: 80px;
+    padding-right: 80px;
+    height: 26vh;
+    background-color: rgb(21, 20, 20);
+    color: white;
+    font-family: cursive;
+    border-top: 2px solid rgba(255, 251, 251, 0.553);
+}
+
+.footer-copyright a{
+    text-decoration: none;
+    color: yellow;
+}

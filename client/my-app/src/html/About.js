@@ -31,8 +31,6 @@ function About() {
                         Ready to embark on a journey with Influencer Hub? <button id="joinnow" onClick={()=>navigate('/signup')}>Join Now</button>
                     </p>
                 </div>
-
-                {/* Image Section */}
                 <div className="image-section">
                     <img src="https://images.unsplash.com/photo-1627843563095-f6e94676cfe0?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fGZhY2Vib29rfGVufDB8fDB8fHww" alt="Image 1" />
                     <img src="https://images.unsplash.com/photo-1611262588024-d12430b98920?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8aW5zdGFncmFtfGVufDB8fDB8fHww" alt="Image 2" />

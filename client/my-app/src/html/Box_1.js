@@ -12,8 +12,10 @@ function Box_1() {
     <div class="main-div-2">
         <Stack spacing={3} direction='row'>                
                 <Button variant='text' size='large' onClick={()=>navigate('/influencer')}>HIRE INFLUENCERS</Button>
-                <Button variant='text' size='large' onClick={()=>navigate('/resources')}>RESOURCES</Button>
                 <Button variant='text' size='large' onClick={()=>navigate('/about')}>ABOUT US</Button>
+                <Button variant='text' size='large' onClick={()=>navigate('/profile')}>PROFILE</Button>
+                <Button variant='text' size='large' onClick={()=>navigate('/post')}>POSTS</Button>
+                <Button variant='text' size='large' onClick={()=>navigate('/chat')}>CHAT</Button>
         </Stack>
     </div>
     )

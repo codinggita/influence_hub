@@ -2,19 +2,9 @@ import React from 'react'
 import '../css/Profile.css'
 import { useNavigate } from 'react-router-dom'
 import Box_1 from './Box_1';
-import {
-    Accordion,
-    AccordionItem,
-    AccordionButton,
-    AccordionPanel,
-    AccordionIcon,
-} from '@chakra-ui/react'
-import { Tabs, TabList, TabPanels, Tab, TabPanel } from '@chakra-ui/react'
-import { Box } from '@mui/material';
-
 
 function Profile() {
-    const nevigate=new useNavigate();
+    const navigate=new useNavigate();
     return (
         <div>
             <Box_1/>
@@ -32,82 +22,28 @@ function Profile() {
                         </div>
                         <div id="chat-box">
                             <h1>Chats</h1>
-                            {/* <Accordion allowToggle>
-                                <AccordionItem>
-                                    <h2>
-                                    <AccordionButton>
-                                        <Box as="span" flex='1' textAlign='left'>
-                                        Section 1 title
-                                        </Box>
-                                        <AccordionIcon />
-                                    </AccordionButton>
-                                    </h2>
-                                    <AccordionPanel pb={4}>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-                                    veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                                    commodo consequat.
-                                    </AccordionPanel>
-                                </AccordionItem>
-
-                                <AccordionItem>
-                                    <h2>
-                                    <AccordionButton>
-                                        <Box as="span" flex='1' textAlign='left'>
-                                        Section 2 title
-                                        </Box>
-                                        <AccordionIcon />
-                                    </AccordionButton>
-                                    </h2>
-                                    <AccordionPanel pb={4}>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-                                    veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                                    commodo consequat.
-                                    </AccordionPanel>
-                                </AccordionItem>
-                                </Accordion> */}
-                                <Tabs>
-                                    <TabList>
-                                        <Tab>One</Tab>
-                                        <Tab>Two</Tab>
-                                        <Tab>Three</Tab>
-                                    </TabList>
-
-                                    <TabPanels>
-                                        <TabPanel>
-                                        <p>one!</p>
-                                        </TabPanel>
-                                        <TabPanel>
-                                        <p>two!</p>
-                                        </TabPanel>
-                                        <TabPanel>
-                                        <p>three!</p>
-                                        </TabPanel>
-                                    </TabPanels>
-                                    </Tabs>
-                            <div id="chats">
+                            <div id="chats" onClick={()=>navigate('/chat')}>
                                 <h4>Chat 1</h4>
                             </div>
-                            <div id="chats">
+                            <div id="chats" onClick={()=>navigate('/chat')}>
                                 <h4>Chat 1</h4>
                             </div>
-                            <div id="chats">
+                            <div id="chats" onClick={()=>navigate('/chat')}>
                                 <p>sfhdjlsdfodkjfsolk</p>
                             </div>
-                            <div id="chats">
+                            <div id="chats" onClick={()=>navigate('/chat')}>
                                 <h4>Chat 1</h4>
                             </div>
-                            <div id="chats">
+                            <div id="chats" onClick={()=>navigate('/chat')}>
                                 <h4>Chat 1</h4>
                             </div>
-                            <div id="chats">
+                            <div id="chats" onClick={()=>navigate('/chat')}>
                                 <h4>Chat 1</h4>
                             </div>
-                            <div id="chats">
+                            <div id="chats" onClick={()=>navigate('/chat')}>
                                 <h4>Chat 1</h4>
                             </div>
-                            <div id="chats">
+                            <div id="chats" onClick={()=>navigate('/chat')}>
                                 <h4>Chat 1</h4>
                             </div>
                         </div>

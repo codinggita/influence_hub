@@ -1,13 +1,10 @@
 import React from 'react'
-import { Link } from 'react-router-dom';
 import Stack from '@mui/material/Stack';
 import Button from '@mui/material/Button';
 import Avatar from '@mui/material/Avatar';
 import '../css/Navbar.css'
 import { ButtonGroup } from '@mui/material';
-import { createTheme } from "@mui/material/styles";
 import { useNavigate } from 'react-router-dom';
-import Box_1 from './Box_1';
 
 
 function Navbar() {
@@ -32,7 +29,7 @@ function Navbar() {
                             <Button onClick={()=>navigate('/login')}>LOGIN</Button>
                             <Button onClick={()=>navigate('/signup')}>SINGUP</Button>
                         </ButtonGroup>
-                        <Button id="btn1" variant="contained" size="large" color='primary'>Post Request</Button>
+                        <Button id="btn1" variant="contained" size="large" color='primary' onClick={()=>navigate('/post')}>Post Request</Button>
                     </Stack>
                 </div>
             </div>

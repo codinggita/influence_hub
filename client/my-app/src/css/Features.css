@@ -1,0 +1,43 @@
+#image-section{
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease-in-out;
+    position: absolute;
+    left: 70vw;
+}
+
+#image-section :hover{
+    transform: scale(1.1);
+}
+
+.main-div-11{
+    width: 60vw;
+    margin: 10vh;
+    color: white;
+    border-top-right-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+    background-color: rgb(0, 0, 0);
+    padding: 10vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main-div-11 h2 ,#heading{
+    color: rgb(255,0,153);
+}
+
+.main-div-11 li{
+    font-family: cursive;
+    font-style: italic;
+}
+
+.features-ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 30px;
+}

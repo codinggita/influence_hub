@@ -1,7 +1,6 @@
 import React from 'react'
 import { Button } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
-import FormControlLabel from '@mui/material/FormControlLabel';
 import Checkbox from '@mui/material/Checkbox';
 import '../css/SignUp.css'
 

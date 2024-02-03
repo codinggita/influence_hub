@@ -1,0 +1,38 @@
+.main-div-13 {
+    margin: 10vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 60px;
+}
+
+#profile-card-section{
+    margin: 20px;
+    padding: 10px;
+    width: 60vw;
+    border: 2px solid black;
+}
+
+#user-search{
+    margin: 20px;
+    padding: 10px;
+    width: 60vw;
+    border: 2px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#profile-chat-section{
+    margin: 20px;
+    padding: 10px;
+    width: 60vw;
+    border: 2px solid black;
+}
+
+
+#profile-chat-history-display{
+    margin: 30px;
+    padding: 20px;
+    border: 3px solid red;
+}

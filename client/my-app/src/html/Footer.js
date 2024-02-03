@@ -22,6 +22,7 @@ function Footer() {
                         {/* <Button onClick={()=>navigate('/category')}>Categories</Button> */}
                         <Button onClick={()=>navigate('/features')}>Features</Button>
                         {/* <Button onClick={()=>navigate('/programs')}>Programs</Button> */}
+                        <Button onClick={()=>navigate('/adminpage')}>Admin Page</Button>
                     </Stack>
                 </div>
                 <div>

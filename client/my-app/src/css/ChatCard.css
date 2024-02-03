@@ -1,0 +1,18 @@
+.chat-card{
+    margin: 10px;
+    padding: 20px;
+    border: 2px solid black;
+    display: flex;
+    flex-direction: column;
+    font-size: small;
+    border-radius: .6rem;
+}
+
+.chat-card h1{
+    font-size: medium;
+}
+
+#chat-details{
+    display: flex;
+    justify-content: space-between;
+}

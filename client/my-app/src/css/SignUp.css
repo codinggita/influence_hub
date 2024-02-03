@@ -1,9 +1,7 @@
-#main-div-7{
-    height: 80vh I !important;
-}
-
 #terms{
+    margin-left: 20px;
     display: flex;
+    gap: 20px;
 }
 
 .signup-section{
@@ -15,12 +13,22 @@
 .signup-section form{
     width: 30vw;
     padding: 30px;
-    height: 60vh;
-    background-color: rgba(255, 0, 153, 0.712);
+    height: 70vh;
+    background-color: rgba(255, 0, 153, 0);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    border: 1px solid pink;
+    box-shadow: 5px 5px 10px 0px rgb(255, 0, 255);
     border-radius: 1.2rem;
+}
+
+
+.signup-section form #input-box{
+    padding-left: 10px;
+    height: 60px;
+    box-shadow: 5px 5px 10px 0px rgb(255, 0, 153);
+    border-radius: .6rem;
+    font-size: larger ;
+    font-family: cursive;
 }

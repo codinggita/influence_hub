@@ -2,11 +2,14 @@ import React from 'react'
 import '../css/Profile.css'
 import { useNavigate } from 'react-router-dom'
 import Box_1 from './Box_1';
+import Navbar from './Navbar';
+import Footer from './Footer';
 
 function Profile() {
     const navigate=new useNavigate();
     return (
         <div>
+            <Navbar/>
             <Box_1/>
             <div class="main-div-8">
                 <div class="main-content-5">
@@ -50,6 +53,7 @@ function Profile() {
                     </div>
                 </div>
             </div>
+            <Footer/>
         </div>
     )
 }

@@ -5,6 +5,8 @@ import PlaceIcon from '@mui/icons-material/Place';
 import '../css/Influencer.css'
 import Box_1 from './Box_1';
 import { Button } from '@mui/material';
+import Navbar from './Navbar';
+import Footer from './Footer';
 
 
 
@@ -12,6 +14,7 @@ function Influencer() {
     const navigate=new useNavigate();
     return (
     <div>
+        <Navbar/>
         <Box_1/>
         <div class="main-div-5">
                 <h1>Top Influencer</h1>
@@ -90,65 +93,12 @@ function Influencer() {
                                 </div>
                                 <div><img onClick={()=>navigate('/profile')} src='https://images.unsplash.com/photo-1658845489483-6d54f6d5a766?q=80&w=1742&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' alt='error'></img></div>
                             </div>
-                            <div class="influencercard">
-                                <div id="info">
-                                    <p>username</p>
-                                    <p>location</p>
-                                    <p>link</p>
-                                    <p>Description</p>
-                                </div>
-                                <div><img onClick={()=>navigate('/profile')} src='https://images.unsplash.com/photo-1658845489483-6d54f6d5a766?q=80&w=1742&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' alt='error'></img></div>
-                            </div>
-                            <div class="influencercard">
-                                <div id="info">
-                                    <p>username</p>
-                                    <p>location</p>
-                                    <p>link</p>
-                                    <p>Description</p>
-                                </div>
-                                <div><img onClick={()=>navigate('/profile')} src='https://images.unsplash.com/photo-1658845489483-6d54f6d5a766?q=80&w=1742&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' alt='error'></img></div>
-                            </div>
-                            <div class="influencercard">
-                                <div id="info">
-                                    <p>username</p>
-                                    <p>location</p>
-                                    <p>link</p>
-                                    <p>Description</p>
-                                </div>
-                                <div><img onClick={()=>navigate('/profile')} src='https://images.unsplash.com/photo-1658845489483-6d54f6d5a766?q=80&w=1742&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' alt='error'></img></div>
-                            </div>
-                            <div class="influencercard">
-                                <div id="info">
-                                    <p>username</p>
-                                    <p>location</p>
-                                    <p>link</p>
-                                    <p>Description</p>
-                                </div>
-                                <div><img onClick={()=>navigate('/profile')} src='https://images.unsplash.com/photo-1658845489483-6d54f6d5a766?q=80&w=1742&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' alt='error'></img></div>
-                            </div>
-                            <div class="influencercard">
-                                <div id="info">
-                                    <p>username</p>
-                                    <p>location</p>
-                                    <p>link</p>
-                                    <p>Description</p>
-                                </div>
-                                <div><img onClick={()=>navigate('/profile')} src='https://images.unsplash.com/photo-1658845489483-6d54f6d5a766?q=80&w=1742&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' alt='error'></img></div>
-                            </div>
-                            <div class="influencercard">
-                                <div id="info">
-                                    <p>username</p>
-                                    <p>location</p>
-                                    <p>link</p>
-                                    <p>Description</p>
-                                </div>
-                                <div><img onClick={()=>navigate('/profile')} src='https://images.unsplash.com/photo-1658845489483-6d54f6d5a766?q=80&w=1742&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' alt='error'></img></div>
-                            </div>
                         </div>
                         </div>
                     {/* </div> */}
             </div>
         </div>
+        <Footer/>
     </div>
     )
 }

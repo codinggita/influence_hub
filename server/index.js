@@ -1,49 +1,62 @@
 const express = require('express');
 const mongoose = require('mongoose');
+const bodyParser = require('body-parser');
+const cors = require('cors');
+const bcrypt = require('bcrypt'); // Import the bcrypt package
+
 const app = express();
-const port = 5000;
+const PORT = 5000;
 
-app.use(express.json());
+mongoose.connect('mongodb+srv://ry9826653:123456789987654321@cluster0.q1bdkdy.mongodb.net/app', { useNewUrlParser: true, useUnifiedTopology: true });
+const db = mongoose.connection;
 
-app.listen(port, () => {
-    console.log(`Server has been started on port ${port}`);
+db.on('error', console.error.bind(console, 'MongoDB connection error:'));
+db.once('open', () => {
+  console.log('Connected to MongoDB');
 });
 
-// Connect to your MongoDB database
-mongoose.connect('mongodb+srv://ry9826653:123456789987654321@cluster0.q1bdkdy.mongodb.net/app', { useNewUrlParser: true, useUnifiedTopology: true })
-    .then(() => console.log('Connected to MongoDB'))
-    .catch(err => console.error('Error connecting to MongoDB:', err));
-
-// Define your User schema
 const userSchema = new mongoose.Schema({
-    email: { type: String, required: true, unique: true },
-    password: { type: String, required: true },
-    role: { type: String }
+  username: String,
+  email: String,
+  password: String,
 });
 
 const User = mongoose.model('User', userSchema);
 
+app.use(bodyParser.json());
+app.use(cors());
 
-// User signup route
 app.post('/app/user/signup', async (req, res) => {
-    try {
-        const { email, password, role } = req.body;
+  const { username, email, password } = req.body;
 
-        // Ensure that email and password are provided
-        if (!email || !password) {
-            return res.status(400).json({ message: 'Email and password are required' });
-        }
-
-        const user = new User({ email, password, role });
-
-        await user.save();
-
-        res.status(201).json({ message: 'User created successfully' });
-    } catch (err) {
-        console.error(err);
-        res.status(400).json({ message: 'Error creating user' });
+  try {
+    // Check if the email is already registered
+    const existingUser = await User.findOne({ email });
+    if (existingUser) {
+      return res.status(400).json({ message: 'Email is already registered' });
     }
+
+    // Hash the password before saving it to the database
+    const hashedPassword = await bcrypt.hash(password, 10);
+
+    // Create a new user with the hashed password
+    const newUser = new User({ username, email, password: hashedPassword });
+
+    // Save the user to the database
+    await newUser.save();
+
+    res.status(201).json({ message: 'User registered successfully' });
+  } catch (error) {
+    console.error('Error during user registration:', error);
+    res.status(500).json({ message: 'Internal Server Error' });
+  }
 });
+
+app.listen(PORT, () => {
+  console.log(`Server is running on http://localhost:${PORT}`);
+});
+
+
 
 
 // User login route (using plain text comparison for password)

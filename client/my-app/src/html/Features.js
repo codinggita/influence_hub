@@ -1,10 +1,13 @@
 import React from 'react'
 import Box_1 from './Box_1'
 import '../css/Features.css'
+import Navbar from './Navbar'
+import Footer from './Footer'
 
 function Features() {
     return (
         <div>
+            <Navbar/>
             <Box_1/>
             <div class="main-div-11">
                     <h2>Key Features of My Website</h2>
@@ -83,7 +86,7 @@ function Features() {
                         </ul>
                     </ul>
             </div>
-
+            <Footer/>
         </div>
     )
 }

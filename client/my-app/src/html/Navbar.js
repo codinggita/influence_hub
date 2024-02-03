@@ -16,18 +16,18 @@ function Navbar() {
                     <Stack spacing={3} direction="row">
                     <Avatar alt="Remy Sharp" src="/static/images/avatar/1.jpg" />
                         <ButtonGroup variant="text" color='primary' size='large' aria-label="align-button-group">
-                            <Button onClick={()=>navigate('/guide')}>HOW IT WORKS</Button>
-                            <Button onClick={()=>navigate('/features')}>FEATURES</Button>
-                            <Button onClick={()=>navigate('/influencer')}>FIND INFLUENCERS</Button>
-                            <Button onClick={()=>navigate('/')}>Home</Button>
+                            <Button id='button-mui' onClick={()=>navigate('/guide')}>HOW IT WORKS</Button>
+                            <Button id='button-mui' onClick={()=>navigate('/features')}>FEATURES</Button>
+                            <Button id='button-mui' onClick={()=>navigate('/influencer')}>FIND INFLUENCERS</Button>
+                            <Button id='button-mui' onClick={()=>navigate('/')}>Home</Button>
                         </ButtonGroup>
                     </Stack>
                 </div>
                 <div>
                     <Stack spacing={3} direction="row">
                         <ButtonGroup variant="text">
-                            <Button onClick={()=>navigate('/login')}>LOGIN</Button>
-                            <Button onClick={()=>navigate('/signup')}>SINGUP</Button>
+                            <Button id='button-mui' onClick={()=>navigate('/login')}>LOGIN</Button>
+                            <Button id='button-mui' onClick={()=>navigate('/signup')}>SINGUP</Button>
                         </ButtonGroup>
                         <Button id="btn1" variant="contained" size="large" color='primary' onClick={()=>navigate('/post')}>Post Request</Button>
                     </Stack>

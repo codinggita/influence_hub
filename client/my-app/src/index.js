@@ -1,11 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import Navbar from './html/Navbar';
 import App from './App';
 import {BrowserRouter,Route,Routes} from "react-router-dom";
 import Influencer from './html/Influencer';
-import Footer from './html/Footer';
 import Home from './html/Home';
 import Features from './html/Features';
 import Login  from './html/Login';
@@ -19,7 +17,6 @@ import Chat from './html/Chat';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <BrowserRouter>
-  <Navbar/>
   <Routes>
     <Route path='/' element={<Home/>}></Route>
     <Route path='/influencer' element={<Influencer/>}></Route>
@@ -32,6 +29,5 @@ root.render(
     <Route path='/post' element={<Post/>}></Route>
     <Route path='/chat' element={<Chat/>}></Route>
   </Routes>
-  <Footer/>
 </BrowserRouter>
 );

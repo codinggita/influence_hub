@@ -2,12 +2,15 @@ import React from 'react'
 import '../css/About.css'
 import { useNavigate } from 'react-router-dom'
 import Box_1 from './Box_1';
+import Navbar from './Navbar';
+import Footer from './Footer';
 
 
 function About() {
     const navigate=new useNavigate();
     return (
         <div>
+            <Navbar/>
             <Box_1/>
             <div>
             <div className="about-page">
@@ -38,6 +41,7 @@ function About() {
                 </div>
                 </div>
             </div>
+            <Footer/>
         </div>
     )
 }

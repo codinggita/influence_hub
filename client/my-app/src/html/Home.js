@@ -3,11 +3,14 @@ import { useNavigate } from 'react-router-dom';
 import React from 'react'
 import '../css/Home.css'
 import Box_1 from './Box_1';
+import Navbar from './Navbar';
+import Footer from './Footer';
 
 function Home() {
     const navigate=new useNavigate();
     return (
         <div>
+            <Navbar/>
             <Box_1/>
             <div class="main-div-4">
                 <div>
@@ -46,6 +49,7 @@ function Home() {
                     </div>
                 </div>
             </div>
+            <Footer/>
         </div>
     )
 }

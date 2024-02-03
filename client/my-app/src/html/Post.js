@@ -15,12 +15,15 @@ import SwipeableDrawer from '@mui/material/SwipeableDrawer';
 import HomeIcon from '@mui/icons-material/Home';
 import DragIndicatorIcon from '@mui/icons-material/DragIndicator';
 import '../css/Post.css'
+import Navbar from './Navbar';
+import Footer from './Footer';
 
 function Post() {
     const navigate=new useNavigate();
 
     return (
         <div>
+            <Navbar/>
             <Box_1/>
             <div class="main-div-9">
                 <div class="nevigation-section">
@@ -273,6 +276,7 @@ function Post() {
                     </Card>
                 </div>
             </div>
+            <Footer/>
         </div>
     )
 }

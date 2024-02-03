@@ -4,6 +4,8 @@ import ComponentTwo from './html/ComponentTwo';
 import './App.css'
 import { Button } from '@mui/material';
 import Box_1 from './html/Box_1';
+import Navbar from './html/Navbar'
+import Footer from './html/Footer';
 
 const App = () => {
   const [showComponentOne, setShowComponentOne] = useState(true); // Set to true by default
@@ -21,6 +23,7 @@ const App = () => {
 
   return (
     <div>
+      <Navbar/>
       <Box_1/>
       <div class="main-app-class">
         <div class="compo-logic-1">
@@ -31,6 +34,7 @@ const App = () => {
         {showComponentOne && <ComponentOne />}
         {showComponentTwo && <ComponentTwo />}
       </div>
+      <Footer/>
     </div>
   );
 };

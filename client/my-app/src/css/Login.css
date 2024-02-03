@@ -1,39 +1,31 @@
 .main-div-7{
-    background-color: beige;
-    height: 120vh;
+    background-color: rgb(0, 0, 0);
+    height: 100vh;
     display: flex;
     justify-content: center;
-}
-
-.login-section{
-    display: flex;
-    justify-items: center;
-    align-items: center;
+    align-items: center;    
+    color: white;
 }
 
 .login-section form{
     width: 30vw;
-    padding: 30px;
-    height: 50vh;
-    background-color: rgba(255, 0, 153, 0.712);
+    padding: 40px;
+    height: 60vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    border: 1px solid pink;
+    border: 1px solid rgb(255, 255, 255);
+    box-shadow: 5px 5px 10px 0px rgb(255, 0, 255);
     border-radius: 1.2rem;
 }
 
-form input{
-    padding-left: 8px;
+.login-section form #input-box{
+    padding-left: 10px;
     height: 60px;
-    background: none;
-    color: white;
-    border-bottom: 2px solid white;
-}
-
-form input ::placeholder{
-    color: white;
+    box-shadow: 5px 5px 10px 0px rgb(255, 0, 153);
+    border-radius: .6rem;
+    font-size: larger ;
 }
 
 #rememberme{
@@ -53,8 +45,8 @@ form input ::placeholder{
 
 #btn8{
     width: 280px;
-    background-color: rgba(255, 255, 255, 0.775);
-    border: 2px solid black;
-    color: black;
+    background-color: rgba(255, 255, 255, 0);
+    border: 2px solid rgb(255, 255, 255);
+    color: rgb(255, 255, 255);
     border-radius: 1.2rem;
 }

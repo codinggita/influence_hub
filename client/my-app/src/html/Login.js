@@ -1,21 +1,22 @@
 import React from 'react'
 import { Button } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
-import Checkbox from '@mui/material/Checkbox';
 import '../css/Login.css'
+
 
 
 function Login() {
     const navigate=new useNavigate();
+    
     return (
         <div class="main-div-7">
             <div class="login-section">
                 <form>
-                    <input type='text' placeholder='Username'></input>
-                    <input type='text' placeholder='Password'></input>
+                    <input id='input-box' type='text' placeholder='Username'></input>
+                    <input id='input-box' type='text' placeholder='Password'></input>
                     <div id="rememberme">
                         <div>
-                        <Checkbox/>
+                        <input id='check-box'  type='checkbox'></input>
                         <p>Remember me</p>
                         </div>
                         <p>Forgot Password ?</p>

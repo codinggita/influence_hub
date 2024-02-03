@@ -5,7 +5,8 @@
     display: flex;
     justify-content: space-between;
     justify-items: center;
-    background-color: rgb(0, 122, 149);
+    background-color: rgb(0, 0, 0);
+    border-bottom: 1px solid rgb(255, 255, 255);
     color: white;
 }
 
@@ -52,7 +53,7 @@ form input{
 }
 
 .main-div-6{
-    background-color: rgb(217, 217, 217);
+    background-color: rgb(0, 0, 0);
 }
 
 #icon{
@@ -84,8 +85,12 @@ form input{
     margin-left: 80px;
     width: 20vw;
     height: 40vh;
-    background-color: white;
-    box-shadow: 10px 10px 10px 0px rgba(0, 0, 0, 0.5);
+    background-color: rgb(0, 0, 0);
+    box-shadow: 10px 10px 10px 0px rgba(245, 0, 153, 1);
+    color: white;
+    border-top: 1px solid white;
+    border-left: 1px solid white;
+    border-radius: 2rem;
 }
 
 .showcase{
@@ -95,14 +100,19 @@ form input{
     margin-right: 80px;
     margin-bottom: 140px;
     width: 100%;
-    background-color: white;
-    box-shadow: 10px 10px 10px 0px rgba(0, 0, 0, 0.5);
+    box-shadow: 10px 10px 10px 0px rgba(245, 0, 153, 1);
+    color: white;
+    border-top: 1px solid white;
+    border-left: 1px solid white;
+    border-radius: 2rem;
+    gap: 50px;
 }
 
 .showcase img{
     padding: 10px;
     width: 15vw;
     height: 15vh;
+    border-radius: 2rem;
 }
 
 
@@ -114,5 +124,7 @@ form input{
 .influencercard{
     display: flex;
     justify-content: space-between;
-    border-top: 2px solid rgb(217, 217, 217);
+    border-top: 1px solid white;
+    padding: 20px;
+    border-radius: 2rem;
 }

@@ -1,10 +1,13 @@
 import React from 'react'
 import '../css/Chat.css'
 import Box_1 from './Box_1'
+import Navbar from './Navbar'
+import Footer from './Footer'
 
 function Chat() {
     return (
         <div>
+            <Navbar/>
             <Box_1/>
             <div class="main-div-10">
                 <div class="chat-nevigation">
@@ -49,6 +52,7 @@ function Chat() {
                     </div>
                 </div>
             </div>
+            <Footer/>
         </div>
     )
 }

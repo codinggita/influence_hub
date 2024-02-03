@@ -13,11 +13,35 @@ function Profile() {
             <Box_1/>
             <div class="main-div-8">
                 <div class="main-content-5">
-                    <div id="profile-description">
-                        <img id="profile-photo" src='https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjZ8fHBvcnRyYWl0fGVufDB8fDB8fHww' alt='profile-photo'></img>
-                        <h1>Id</h1>
-                        <p>Name</p>
-                        <p>description</p>
+                    <div >
+                        <div id="profile-description">
+                            <img id="profile-photo" src='https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjZ8fHBvcnRyYWl0fGVufDB8fDB8fHww' alt='profile-photo'></img>
+                            <h1>Id</h1>
+                            <p>Name</p>
+                            <p>Description</p>
+                        </div>
+                        <div id='profile-details'>
+                            <div>
+                                <h1 onClick={()=>navigate('/profiledetails')}>Profile Details</h1>
+                            </div>
+                        </div>
+                        <div class="post-add" >
+                                <h1>Post Add</h1>
+                                <div>
+                                    <form action="/your-handling-page" method="post" enctype="multipart/form-data">
+                                        <label for="image">Select Image:</label>
+                                        <input type="file" class="custom-file-upload" id="image" name="image" accept="image/*"></input>
+
+                                        <label for="title">Title</label>
+                                        <input type='text' id='title' name='title' ></input>
+
+                                        <label for="description">Description:</label>
+                                        <textarea id="description" name="description" rows="5"></textarea>
+
+                                        <button type="submit">Post</button>
+                                    </form>
+                                </div>
+                            </div>
                     </div>
                     <div id="profile-feature">
                         <div id="review">

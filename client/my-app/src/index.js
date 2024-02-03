@@ -12,6 +12,7 @@ import Profile from './html/Profile';
 import About from './html/About';
 import Post from './html/Post';
 import Chat from './html/Chat';
+import ProfileDetails from './html/ProfileDetails';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -28,6 +29,7 @@ root.render(
     <Route path='/about' element={<About/>}></Route>
     <Route path='/post' element={<Post/>}></Route>
     <Route path='/chat' element={<Chat/>}></Route>
+    <Route path='/profiledetails' element={<ProfileDetails/>}></Route>
   </Routes>
 </BrowserRouter>
 );

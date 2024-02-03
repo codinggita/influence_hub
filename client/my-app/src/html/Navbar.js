@@ -27,7 +27,7 @@ function Navbar() {
                     <Stack spacing={3} direction="row">
                         <ButtonGroup variant="text">
                             <Button id='button-mui' onClick={()=>navigate('/login')}>LOGIN</Button>
-                            <Button id='button-mui' onClick={()=>navigate('/signup')}>SINGUP</Button>
+                            <Button id='button-mui' onClick={()=>navigate('/signup')}>SIGN UP</Button>
                         </ButtonGroup>
                         <Button id="btn1" variant="contained" size="large" color='primary' onClick={()=>navigate('/post')}>Post Request</Button>
                     </Stack>

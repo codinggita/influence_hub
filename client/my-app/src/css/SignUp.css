@@ -1,34 +1,81 @@
-#terms{
-    margin-left: 20px;
-    display: flex;
-    gap: 20px;
+@media (min-width:430px) {
+    
+    #terms{
+        margin-left: 20px;
+        display: flex;
+        gap: 20px;
+    }
+
+    .signup-section{
+        display: flex;
+        justify-items: center;
+        align-items: center;
+    }
+
+    .signup-section form{
+        width: 30vw;
+        padding: 30px;
+        height: 70vh;
+        background-color: rgba(255, 0, 153, 0);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        box-shadow: 5px 5px 10px 0px rgb(255, 0, 153);
+        border-radius: 1.2rem;
+    }
+
+
+    .signup-section form #input-box{
+        padding-left: 10px;
+        height: 60px;
+        box-shadow: 5px 5px 10px 0px rgb(255, 0, 153);
+        border-radius: .6rem;
+        font-size: larger ;
+        font-family: cursive;
+    }
+
 }
 
-.signup-section{
-    display: flex;
-    justify-items: center;
-    align-items: center;
-}
 
-.signup-section form{
-    width: 30vw;
-    padding: 30px;
-    height: 70vh;
-    background-color: rgba(255, 0, 153, 0);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    box-shadow: 5px 5px 10px 0px rgb(255, 0, 255);
-    border-radius: 1.2rem;
-}
+@media (max-width:430px) {
+    
+    #terms{
+        margin-left: 20px;
+        display: flex;
+        gap: 20px;
+    }
+
+    .signup-section{
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        justify-items: center;
+        align-items: center;
+    }
+
+    .signup-section form{
+        margin: 10vw;
+        padding: 30px;
+        height: 70vh;
+        width: 80vw;
+        background-color: rgba(255, 0, 153, 0);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        box-shadow: 5px 5px 10px 0px rgb(255, 0, 153);
+        border-radius: 1.2rem;
+    }
 
 
-.signup-section form #input-box{
-    padding-left: 10px;
-    height: 60px;
-    box-shadow: 5px 5px 10px 0px rgb(255, 0, 153);
-    border-radius: .6rem;
-    font-size: larger ;
-    font-family: cursive;
+    .signup-section form #input-box{
+        padding-left: 10px;
+        height: 60px;
+        box-shadow: 5px 5px 10px 0px rgb(255, 0, 153);
+        border-radius: .6rem;
+        font-size: medium ;
+        font-family: cursive;
+    }
+
 }

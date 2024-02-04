@@ -89,7 +89,9 @@ export default function ProfileDetails() {
     return (
         <div>
             <Navbar/>
-            <Box_1/>
+            <div class="box-1">
+                <Box_1/>
+            </div>
             <div>
                     <div class="main-div-12">
                         <h2>Registration Form</h2>

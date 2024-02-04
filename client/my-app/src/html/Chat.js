@@ -8,7 +8,9 @@ function Chat() {
     return (
         <div>
             <Navbar/>
-            <Box_1/>
+            <div class="box-1">
+                <Box_1/>
+            </div>
             <div class="main-div-10">
                 <div class="chat-nevigation">
                     <h1>Chat Box</h1>

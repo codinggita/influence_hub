@@ -24,7 +24,9 @@ const App = () => {
   return (
     <div>
       <Navbar/>
-      <Box_1/>
+      <div class="box-1">
+        <Box_1/>
+      </div>
       <div class="main-app-class">
         <div class="compo-logic-1">
           <Button id="btn9" varient='contained' onClick={() => handleButtonClick(1)}>Show Component One</Button>

@@ -1,73 +1,190 @@
-#content-4{
-    /* padding-left: 80px;
-    padding-right: 50px; */
-    display: flex;
-    justify-items: center;
-    justify-content: space-between;
+@media (min-width:430px) {
+    
+    #content-40{
+        display: flex;
+        justify-items: center;
+        justify-content: space-between;
+    }
+
+    #content-40 #div-1{
+        background-image: url(../phone\ frame.jpg) ;
+        background-size: 100% 100%;
+        background-position: center;
+        margin-top: 100px;
+        margin-left: 130px;
+        height: 76vh;
+        width: 26vw;
+        border-radius: 3rem;
+        box-shadow: 5px 5px 10px 0px rgb(0, 0, 0);
+    }
+
+    #content-40 #div-2{
+        height: 100vh;
+        width: 50%;
+        background-color: rgba(250, 235, 215, 0);
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+
+    }
+
+    #content-40 #div-2 Button{
+        margin-top: 40px;
+        background-color: rgb(255,0,153);
+        font-family: cursive;
+        width: 140px;
+        height: 60px;
+        border-radius: .8rem;
+        box-shadow: 5px 5px 10px 0px rgb(255, 255, 255);
+    }
+
+    #content-40 #div-2 div{
+        padding: 20px;
+        width: 24vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        border-radius: .6rem;
+        box-shadow: 5px 5px 10px 0px rgb(255, 255, 255);
+        font-family: cursive;
+    }
+
+    #chat{
+        margin-top: 40px;
+        margin-left: 9px;
+        height: 69.6vh !important;
+        width: 24.1vw;
+        border-top-left-radius: 0.4rem;
+        border-top-right-radius: 0.4rem;
+        border-bottom-left-radius: 2rem;
+        border-bottom-right-radius: 2rem;
+        filter: brightness(1);
+    }
+
+    .main-div-40 #content-1 p{
+        font-family: cursive;
+    }
+
+    .main-div-40 #content-1 h1{
+        color: rgba(255, 0, 153, 0.733);
+        font-weight: 500;
+    }
+
+    #main-div-40-content-40 img{
+        width: 100vw;
+        filter: brightness(.4);
+    }
+
+    #top-content-1{
+        position: absolute;
+        z-index: 15;
+        top: 40vh;
+        font-size: larger;
+        color: white;
+        padding: 80px;
+        width: 60vw;
+        display: flex;
+        flex-direction: column;
+        gap: 5vh;
+    }
+
+    #top-content-1 #btn40{
+        height: 10vh;
+        width: 20vw;
+        background-color: rgb(255,0,153);
+        border: 1px solid white;
+        border-radius: 2rem;
+    }
+
 }
 
-#content-4 #div-1{
-    background-image: url(../phone\ frame.jpg) ;
-    background-size: 100% 100%;
-    background-position: center;
-    margin-top: 100px;
-    margin-left: 130px;
-    height: 76vh;
-    width: 26vw;
-    border-radius: 3rem;
-    box-shadow: 5px 5px 10px 0px rgb(0, 0, 0);
-}
+@media (max-width:430px) {
+    
+    #content-40{
+        display: flex;
+        flex-direction: column;
+        justify-items: center;
+        justify-content: space-between;
+        gap: 5vh;
+    }
 
-#content-4 #div-2{
-    height: 100vh;
-    width: 50%;
-    background-color: rgba(250, 235, 215, 0.308);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    box-shadow: 5px 5px 10px 0px rgb(0, 0, 0);
+    #content-40 #div-1{
+        background-image: url(../phone\ frame.jpg) ;
+        background-size: 100% 100%;
+        background-position: center;
+        margin-top: 5vh;
+        margin-left: 5vw;
+        height: 30vh;
+        width: 40vw;
+        border-radius: 1.8rem;
+        box-shadow: 5px 5px 10px 0px rgb(0, 0, 0);
+    }
 
-}
+    #content-40 #div-2{
+        height: 75vh;
+        width: 90vw;
+        color: white;
+        background-color: rgba(0, 0, 0, 0.308);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 
-#content-4 #div-2 Button{
-    margin-top: 40px;
-    background-color: rgb(255,0,153);
-    font-family: cursive;
-    width: 140px;
-    height: 60px;
-    border-radius: .8rem;
-    box-shadow: 5px 5px 10px 0px rgb(0, 0, 0);
-}
+    #content-40 #div-2 Button{
+        margin-top: 40px;
+        background-color: rgb(255,0,153);
+        font-family: cursive;
+        width: 140px;
+        height: 60px;
+        border-radius: .8rem;
+        box-shadow: 5px 5px 10px 0px rgb(255, 255, 255);
+    }
 
-#content-4 #div-2 div{
-    padding: 20px;
-    width: 24vw;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    border-radius: .6rem;
-    box-shadow: 5px 5px 10px 0px rgb(0, 0, 0);
-    font-family: cursive;
-}
+    #content-40 #div-2 div{
+        padding: 20px;
+        width: 65vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        border-radius: .6rem;
+        box-shadow: 5px 5px 10px 0px rgb(255, 255, 255);
+        font-family: cursive;
+    }
 
-#chat{
-    margin-top: 40px;
-    margin-left: 9px;
-    height: 69.6vh !important;
-    width: 24.1vw;
-    border-top-left-radius: 0.4rem;
-    border-top-right-radius: 0.4rem;
-    border-bottom-left-radius: 2rem;
-    border-bottom-right-radius: 2rem;
-    filter: brightness(1);
-}
+    #chat{
+        margin-top: 2vh;
+        margin-left: 1vw;
+        height: 27.6vh !important;
+        width: 38.1vw;
+        border-top-left-radius: 0.4rem;
+        border-top-right-radius: 0.4rem;
+        border-bottom-left-radius: 1.5rem;
+        border-bottom-right-radius: 1.5rem;
+        filter: brightness(1);
+    }
 
-.main-div-4 #content-1 p{
-    font-family: cursive;
-}
+    .main-div-40 #content-1 p{
+        font-family: cursive;
+    }
 
-.main-div-4 #content-1 h1{
-    color: rgba(255, 0, 153, 0.733);
-    font-weight: 500;
+    .main-div-40 #content-1 h1{
+        color: rgba(255, 0, 153, 0.733);
+        font-weight: 500;
+    }
+
+    #main-div-40-content-40 img{
+        width: 100vw;
+        filter: brightness(.4);
+    }
+
+    #top-content-1{
+        position: absolute;
+        z-index: 15;
+        top: 8vh;
+        color: white;
+        padding: 20px;
+    }
+
 }

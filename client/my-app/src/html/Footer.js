@@ -35,6 +35,7 @@ function Footer() {
                     </Stack>
                 </div>
                 <div>
+                    <h1>Links</h1>
                     <p><YouTubeIcon/> YouTube</p>
                     <p><FacebookIcon/> Facebook</p>
                     <p><InstagramIcon/> Instagram</p>

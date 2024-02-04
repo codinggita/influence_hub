@@ -15,13 +15,13 @@ function Influencer() {
     return (
     <div>
         <Navbar/>
-        <Box_1/>
+        <div class="box-1">
+            <Box_1/>
+        </div>
         <div class="main-div-5">
                 <h1>Top Influencer</h1>
-                <div>
-                    <Button id="btn4" variant='contained' onClick={()=>navigate('/influencer')}>Find a influencer</Button>
-                    <Button id="btn5" variant='outlined' onClick={()=>navigate('/team')}>Find a team</Button>
-                </div>
+                <Button id="btn4" variant='contained' onClick={()=>navigate('/influencer')}>Find a influencer</Button>
+                <Button id="btn5" variant='outlined' onClick={()=>navigate('/team')}>Find a team</Button>
         </div>
         <div class="main-div-6">
             <div>

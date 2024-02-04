@@ -40,7 +40,9 @@ function AdminPage() {
     return (
         <div>
             <Navbar/>
-            <Box_1/>
+            <div class="box-1">
+                <Box_1/>
+            </div>
                 <div class="main-div-13">
                     <div id='user-search'>
                         <h2>User Search</h2>
@@ -62,12 +64,12 @@ function AdminPage() {
                     <div id='profile-card-section'>
                         <h1>Profile</h1>
                         <ProfileCard/>
-                        <Stack spacing={2} direction="row">
+                        <div id="admin-buttons">
                             <Button variant="contained">Create</Button>
                             <Button variant="contained" color='error' >Delete</Button>
                             <Button variant="contained" color='success' >Update</Button>
                             <Button variant="contained" color='warning' >Block</Button>
-                        </Stack>
+                        </div>
                     </div>
                     <div id='profile-chat-section'>
                         <h1>Profile chat history</h1>
@@ -76,12 +78,12 @@ function AdminPage() {
                             <ChatCard/>
                             <ChatCard/>
                         </div>
-                        <Stack spacing={2} direction="row">
+                        <div id="admin-buttons">
                             <Button variant="contained">Create</Button>
                             <Button variant="contained" color='error'>Delete</Button>
                             <Button variant="contained" color='success'>Update</Button>
                             <Button variant="contained" color='warning'>Block</Button>
-                        </Stack>
+                        </div>
                     </div>
                 </div>
             <Footer/>

@@ -10,7 +10,9 @@ function Profile() {
     return (
         <div>
             <Navbar/>
-            <Box_1/>
+            <div class='box-1'>
+                <Box_1/>
+            </div>
             <div class="main-div-8">
                 <div class="main-content-5">
                     <div >

@@ -11,7 +11,9 @@ function About() {
     return (
         <div>
             <Navbar/>
-            <Box_1/>
+            <div class="box-1">
+                <Box_1/>
+            </div>
             <div>
             <div className="about-page">
                 <h1>Welcome to <span style={{ color: '#e74c3c' }}>Influencer Hub</span></h1>

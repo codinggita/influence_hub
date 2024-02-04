@@ -8,7 +8,9 @@ function Features() {
     return (
         <div>
             <Navbar/>
-            <Box_1/>
+            <div class="box-1">
+                <Box_1/>
+            </div>
             <div class="main-div-11">
                     <h2>Key Features of My Website</h2>
                     <ul class="features-ul">

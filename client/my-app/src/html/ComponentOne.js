@@ -9,17 +9,17 @@ const ComponentOne = () => {
 
     return (
         <div>
-            <div class="main-div-4">
-                <div>
+            <div class="main-div-40">
+                <div id="main-div-40-content-40">
                     <img src="https://images.unsplash.com/photo-1643503640904-75c1a2093570?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NzR8fHNvY2lhbCUyMG1lZGlhfGVufDB8fDB8fHww" alt='error'></img>
-                    <div id="content-1">
-                    <h1>How can Influencer hub help your business?</h1>
+                    <div id="top-content-1">
+                        <h1>How can Influencer hub help your business?</h1>
                         <p>The possibilities are endless. We have perfect profiles for your promotions.</p>
-                        <Button id="btn2" variant="contained" size="large" color='primary' onClick={()=>navigate('/influencer')}>FIND INFLUENCER </Button>
+                        <Button id="btn40" variant="contained" size="large" color='primary' onClick={()=>navigate('/influencer')}>FIND INFLUENCER </Button>
                     </div>
                 </div>
                 <div>
-                    <div id="content-4">
+                    <div id="content-40">
                         <div id="div-1">
                             <img id="chat" src='https://plus.unsplash.com/premium_photo-1684761949512-fab7ef8a3b3c?q=80&w=1635&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' alt='chat'></img>
                         </div>

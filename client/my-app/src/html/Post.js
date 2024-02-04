@@ -24,7 +24,9 @@ function Post() {
     return (
         <div>
             <Navbar/>
-            <Box_1/>
+            <div class="box-1">
+                <Box_1/>
+            </div>
             <div class="main-div-9">
                 <div class="nevigation-section">
                     <h1>Nevigate</h1>
@@ -36,7 +38,7 @@ function Post() {
                     <h1>Posts</h1>
                     <Card
                     id='card'
-                    direction={{ base: 'column', sm: 'row' }}
+                    direction='column'
                     overflow='hidden'
                     variant='outline'
                     >
@@ -66,7 +68,6 @@ function Post() {
                     </Card>
                     <Card
                     id='card'
-                    direction={{ base: 'column', sm: 'row' }}
                     overflow='hidden'
                     variant='outline'
                     >
@@ -96,7 +97,6 @@ function Post() {
                     </Card>
                     <Card
                     id='card'
-                    direction={{ base: 'column', sm: 'row' }}
                     overflow='hidden'
                     variant='outline'
                     >
@@ -126,7 +126,6 @@ function Post() {
                     </Card>
                     <Card
                     id='card'
-                    direction={{ base: 'column', sm: 'row' }}
                     overflow='hidden'
                     variant='outline'
                     >
@@ -156,7 +155,6 @@ function Post() {
                     </Card>
                     <Card
                     id='card'
-                    direction={{ base: 'column', sm: 'row' }}
                     overflow='hidden'
                     variant='outline'
                     >
@@ -186,7 +184,6 @@ function Post() {
                     </Card>
                     <Card
                     id='card'
-                    direction={{ base: 'column', sm: 'row' }}
                     overflow='hidden'
                     variant='outline'
                     >
@@ -216,7 +213,6 @@ function Post() {
                     </Card>
                     <Card
                     id='card'
-                    direction={{ base: 'column', sm: 'row' }}
                     overflow='hidden'
                     variant='outline'
                     >
@@ -246,7 +242,6 @@ function Post() {
                     </Card>
                     <Card
                     id='card'
-                    direction={{ base: 'column', sm: 'row' }}
                     overflow='hidden'
                     variant='outline'
                     >

@@ -4,78 +4,131 @@ import Box_1 from './Box_1'
 import Footer from './Footer'
 import Select from 'react-select';
 import '../css/ProfileDetails.css'
+import { Navigate, useNavigate } from 'react-router-dom';
 
 export default function ProfileDetails() {
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        // Perform form submission logic here, e.g., send data to the server
-        console.log('Form submitted:', formData);
-    };
+    const navigate=new useNavigate();
 
-    const handleClearForm = () => {
-        setFormData(initialFormData);
-    };
 
-    const initialFormData = {
-        firstName: '',
-        lastName: '',
-        role: 'admin',
-        additionalDetails: '',
-        address: {
-            section: '',
-            city: '',
-            postalCode: '',
-            state: '',
-            country: '',
-            },
-            company: {
-            companyName: '',
-            timezone: '',
-            location: '',
-            },
-            languages: [],
-        };
+            const [formData, setFormData] = useState({
+                    username:'',
+                    email:'',
+                    password:'',
+                    firstName: '',
+                    lastName: '',
+                    role: 'admin',
+                    address: {
+                    section: '',
+                    city: '',
+                    postalCode: '',
+                    state: '',
+                    country: '',
+                    },
+                    company: {
+                    companyName: '',
+                    timezone: '',
+                    location: '',
+                    },
+                    languages: [],
+                });
+                
+                // Handle input changes for basic information
+                const handleInputChange = (e) => {
+                    const { name, value } = e.target;
+                    setFormData((prevData) => ({
+                    ...prevData,
+                    [name]: value,
+                    }));
+                };
+                
+                // Handle input changes for address
+                const handleAddressChange = (e) => {
+                    const { name, value } = e.target;
+                    setFormData((prevData) => ({
+                    ...prevData,
+                    address: {
+                        ...prevData.address,
+                        [name]: value,
+                    },
+                    }));
+                };
+                
+                // Handle input changes for company details
+                const handleCompanyChange = (e) => {
+                    const { name, value } = e.target;
+                    setFormData((prevData) => ({
+                    ...prevData,
+                    company: {
+                        ...prevData.company,
+                        [name]: value,
+                    },
+                    }));
+                };
+                
+                // Handle language selection changes
+                const handleLanguagesChange = (selectedOptions) => {
+                    const selectedLanguages = selectedOptions.map((option) => option.value);
+                    setFormData((prevData) => ({
+                    ...prevData,
+                    languages: selectedLanguages,
+                    }));
+                };
+                
+                // Handle form submission
+                const handleSubmit = async (e) => {
+                    e.preventDefault();
+                
+                    try {
+                    // Send the form data to your backend API
+                    const response = await fetch('https://influence-hub.onrender.com/your-backend-endpoint', {
+                        method: 'POST',
+                        headers: {
+                        'Content-Type': 'application/json',
+                        },
+                        body: JSON.stringify(formData),
+                    });
+                
+                    if (!response.ok) {
+                        window.alert("cant submit")
+                        throw new Error('Network response was not ok');
+                    }
+                
+                    // Handle the success response from your backend
+                    const data = await response.json();
+                    console.log('Success:', data);
+                    window.alert('Sucessfully Submited');
+                    navigate('/');
+                    
+                    } catch (error) {
+                    // Handle errors
+                    window.alert(error);
+                    console.error('Error:', error);
+                    }
+                };
+                
+                // Clear the form data
+                const handleClearForm = () => {
+                    setFormData({
+                    firstName: '',
+                    lastName: '',
+                    role: 'admin',
+                    address: {
+                        section: '',
+                        city: '',
+                        postalCode: '',
+                        state: '',
+                        country: '',
+                    },
+                    company: {
+                        companyName: '',
+                        timezone: '',
+                        location: '',
+                    },
+                    languages: [],
+                    });
+                };
         
-        const [formData, setFormData] = useState(initialFormData);
-        
-        const handleInputChange = (e) => {
-            const { name, value } = e.target;
-            setFormData((prevFormData) => ({
-            ...prevFormData,
-            [name]: value,
-            }));
-        };
-        
-        const handleAddressChange = (e) => {
-            const { name, value } = e.target;
-            setFormData((prevFormData) => ({
-            ...prevFormData,
-            address: {
-                ...prevFormData.address,
-                [name]: value,
-            },
-            }));
-        };
-        
-        const handleCompanyChange = (e) => {
-            const { name, value } = e.target;
-            setFormData((prevFormData) => ({
-            ...prevFormData,
-            company: {
-                ...prevFormData.company,
-                [name]: value,
-            },
-            }));
-        };
-        
-        const handleLanguagesChange = (selectedOptions) => {
-            const selectedLanguages = selectedOptions.map((option) => option.value);
-            setFormData((prevFormData) => ({
-            ...prevFormData,
-            languages: selectedLanguages,
-            }));
-        };
         
         const languageOptions = [
             { value: 'english', label: 'English' },
@@ -84,7 +137,7 @@ export default function ProfileDetails() {
             { value: 'german', label: 'German' },
             // Add more language options as needed
         ];
-
+    
 
     return (
         <div>
@@ -228,8 +281,8 @@ export default function ProfileDetails() {
                             onChange={handleLanguagesChange}
                             />
                             <br />
-                            <button type="button" onClick={handleClearForm}>Clear Form</button>   
-                            <button type="submit">Submit</button>
+                            <button type="button" onClick={handleClearForm} >Clear Form</button>   
+                            <button type="submit" >Submit</button>
                         </form>                
                     </div>
             </div>

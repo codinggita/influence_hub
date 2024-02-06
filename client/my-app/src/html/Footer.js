@@ -15,7 +15,8 @@ function Footer() {
     }
     return (
         <div>
-            <div class="main-div-3">
+            <div >
+                <div class="main-div-3">
                 <div>
                     <Stack varient='text' size='larger'>
                         <h1>Influencer Hub</h1>
@@ -33,16 +34,17 @@ function Footer() {
                         <Button onClick={()=>navigate('/influencer')}>Influencer</Button>
                         <Button onClick={()=>navigate('/contact')}>Contact</Button>
                     </Stack>
-                </div>
-                <div>
-                    <h1>Links</h1>
-                    <p><YouTubeIcon/> YouTube</p>
-                    <p><FacebookIcon/> Facebook</p>
-                    <p><InstagramIcon/> Instagram</p>
-                    <p><LinkedInIcon/> Linkedin</p>
-                    <p><XIcon/> X</p>
+                </div>    
+            </div>
+                <div class="main-div-42">
+                        <p><YouTubeIcon/></p>
+                        <p><FacebookIcon/></p>
+                        <p><InstagramIcon/></p>
+                        <p><LinkedInIcon/></p>
+                        <p><XIcon/></p>
                 </div>
             </div>
+
             <div class="footer-copyright">
                 <p>&copy; {CopyrightNotice} Influencer Hub. All rights reserved.</p>
                 <p>

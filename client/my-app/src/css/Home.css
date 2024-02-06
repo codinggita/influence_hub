@@ -10,11 +10,13 @@
 
     #btn2{
         height: 70px;
+        width: 200px;
         background-color: rgb(255, 0, 153);
         border-radius: 1.4rem;
     }
 
     #btn3{
+        width: 200px;
         border: 2px solid rgb(255, 0, 153);
         border-radius: 1.4rem;
         color: white;

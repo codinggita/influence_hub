@@ -3,9 +3,10 @@
 
 
     .main-div-3{
-        padding-left: 80px;
-        padding-right: 80px;
-        height: 42vh;
+        padding-left: 140px;
+        padding-right: 140px;
+        padding-bottom: 40px;
+        height: 26vh;
         background-color: rgb(21, 20, 20);
         display: flex;
         justify-content: space-between;
@@ -33,6 +34,15 @@
         color: yellow;
     }
 
+    .main-div-42{
+        padding-left: 80px;
+        background-color: rgb(21, 20, 20);
+        display: flex;
+        justify-content: center;
+        color: white;
+        gap: 30px;
+    }
+
 }
 
 @media (max-width:430px) {
@@ -42,7 +52,7 @@
     .main-div-3{
         padding-left: 80px;
         padding-right: 80px;
-        /* height: 40vh; */
+        padding-bottom: 40px;
         background-color: rgb(21, 20, 20);
         display: flex;
         flex-direction: column;
@@ -71,6 +81,15 @@
     .footer-copyright a{
         text-decoration: none;
         color: yellow;
+    }
+
+    .main-div-42{
+        padding-left: 80px;
+        padding-right: 80px;
+        color: white;
+        background-color: rgb(21, 20, 20);
+        display: flex;
+        justify-content: center;
     }
 
 }

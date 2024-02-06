@@ -11,15 +11,32 @@ mongoose.connect('mongodb+srv://ry9826653:123456789987654321@cluster0.q1bdkdy.mo
 const db = mongoose.connection;
 
 db.on('error', console.error.bind(console, 'MongoDB connection error:'));
-db.once('open', () => {
-  console.log('Connected to MongoDB');
+    db.once('open', () => {
+    console.log('Connected to MongoDB');
 });
 
 const userSchema = new mongoose.Schema({
-  username: String,
-  email: String,
-  password: String,
-});
+    username: String,
+    email: String,
+    password: String,
+    firstName: String,
+    lastName: String,
+    role: String,
+    address: {
+        section: String,
+        city: String,
+        postalCode: String,
+        state: String,
+        country: String,
+        },
+        company: {
+        companyName: String,
+        timezone: String,
+        location: String,
+        },
+        languages: [String],
+    });
+
 
 const User = mongoose.model('User', userSchema);
 
@@ -27,85 +44,100 @@ app.use(bodyParser.json());
 app.use(cors());
 
 app.post('/app/user/signup', async (req, res) => {
-  const { username, email, password } = req.body;
+    const { username, email, password } = req.body;
 
-  try {
-    // Check if the email is already registered
-    const existingUser = await User.findOne({ email });
-    if (existingUser) {
-      return res.status(400).json({ message: 'Email is already registered' });
-    }
-
-    // Hash the password before saving it to the database
-    const hashedPassword = await bcrypt.hash(password, 10);
-
-    // Create a new user with the hashed password
-    const newUser = new User({ username, email, password: hashedPassword });
-
-    // Save the user to the database
-    await newUser.save();
-
-    res.status(201).json({ message: 'User registered successfully' });
-  } catch (error) {
-    console.error('Error during user registration:', error);
-    res.status(500).json({ message: 'Internal Server Error' });
-  }
-});
-
-app.listen(PORT, () => {
-  console.log(`Server is running on http://localhost:${PORT}`);
-});
-
-
-
-
-// User login route (using plain text comparison for password)
-app.post('/app/user/login', async (req, res) => {
     try {
-        const { email, password } = req.body;
-
-        const user = await User.findOne({ email });
-
-        if (!user) {
-            return res.status(401).json({ message: 'Invalid email or password' });
+        // Check if the email is already registered
+        const existingUser = await User.findOne({ email });
+        if (existingUser) {
+        return res.status(400).json({ message: 'Email is already registered' });
         }
 
-        if (password === user.password) { // Plain text password comparison
-            // If authentication is successful, generate a token or session for the user
-            res.status(200).json({ message: 'User logged in successfully' });
-        } else {
-            return res.status(401).json({ message: 'Invalid email or password' });
-        }
-    } catch (err) {
-        console.error(err);
-        res.status(500).json({ message: 'Error logging in' });
+        // Hash the password before saving it to the database
+        // const hashedPassword = await bcrypt.hash(password, 10);
+
+        // Create a new user with the hashed password
+        const newUser = new User({ username, email, password });
+
+        // Save the user to the database
+        await newUser.save();
+
+        res.status(201).json({ message: 'User registered successfully' });
+    } catch (error) {
+        console.error('Error during user registration:', error);
+        res.status(500).json({ message: 'Internal Server Error' });
     }
-});
+    });
+
+    app.listen(PORT, () => {
+    console.log(`Server is running on http://localhost:${PORT}`);
+    });
+
+
 
 
 // User login route (using hashed passwords)
 app.post('/app/user/login', async (req, res) => {
+    console.log('Received login request:', req.body);
+
+
+    const { login, password, rememberMe } = req.body;
+
     try {
-        const { email, password } = req.body;
+        const user = await User.findOne({ $or: [{ username: login }, { email: login }] });        
+        // const user=true;
 
-        const user = await User.findOne({ email });
+        console.log('Found user:', user);
 
-        if (!user) {
-            return res.status(401).json({ message: 'Invalid email or password' });
-        }
+        if (user) {
+        // Temporarily bypass bcrypt for debugging
+        // const isPasswordMatch = password === user.password;
+        // const isPasswordMatch = true;
 
-        const isPasswordValid = await bcrypt.compare(password, user.password);
+        console.log('User password:', user.password);
 
-        if (isPasswordValid) {
-            res.status(200).json({ message: 'User logged in successfully' });
+        // const hashedPassword = await bcrypt.hash(user.password, 10);
+
+
+        // const isPasswordMatch = await bcrypt.compare(password, password);
+        console.log('Password match:', isPasswordMatch);
+
+
+        console.log('Password match:', isPasswordMatch);
+
+        if (true) {
+            res.json({ success: true, message: 'Login successful' });
         } else {
-            return res.status(401).json({ message: 'Invalid email or password' });
+            console.log('Password does not match');
+            res.status(401).json({ success: false, message: 'Invalid login or password' });
         }
-    } catch (err) {
-        console.error(err);
-        res.status(500).json({ message: 'Error logging in' });
+        } else {
+        console.log('User not found');
+        res.status(401).json({ success: false, message: 'Invalid login or password' });
+        }
+    } catch (error) {
+        console.error('Authentication error:', error);
+        res.status(500).json({ success: false, message: 'Internal server error' });
     }
 });
+
+
+app.post('/your-backend-endpoint', async (req, res) => {
+    try {
+        const formData = req.body;
+    
+        // Create a new user document in MongoDB
+        const newUser = new User(formData);
+        await newUser.save();
+    
+        res.status(201).json({ success: true, message: 'User data submitted successfully' });
+        } catch (error) {
+            window.alert("cant submit",error);
+        console.error('Error:', error);
+        res.status(500).json({ success: false, message: 'Internal Server Error' });
+        }
+    });
+
 
 
 app.get('/app/users', async (req, res) => {

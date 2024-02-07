@@ -28,8 +28,8 @@
   .compo-logic-1 Button{
     z-index: 20;
     position: relative;
-    top: 820px;
-    left: 200px;
+    top: 70vh;
+    left: 20vw;
     border: none;
     height: 60px;
     width: 420px;
@@ -72,11 +72,11 @@
   .compo-logic-1 Button{
     z-index: 20;
     position: relative;
-    top: 35vh;
+    top: 40vh;
     left: 50vw;
     border: none;
     height: 65px;
-    width: 180px;
+    width: 40vw;
   }
 
 }

@@ -21,7 +21,7 @@ root.render(
   <BrowserRouter>
   <Routes>
     <Route path='/' element={<Home/>}></Route>
-    <Route path='/influencer' element={<Influencer/>}></Route>
+    <Route path='/user' element={<Influencer/>}></Route>
     <Route path='/features' element={<Features/>}></Route>
     <Route path='/login' element={<Login/>}></Route>
     <Route path='/signup' element={<SignUp/>}></Route>

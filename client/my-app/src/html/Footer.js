@@ -1,6 +1,6 @@
 import React from 'react'
 import '../css/Footer.css'
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { Button, Stack } from '@mui/material';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import InstagramIcon from '@mui/icons-material/Instagram';
@@ -16,7 +16,7 @@ function Footer() {
     return (
         <div>
             <div >
-                <div class="main-div-3">
+                <div className="main-div-3">
                 <div>
                     <Stack varient='text' size='larger'>
                         <h1>Influencer Hub</h1>
@@ -31,12 +31,15 @@ function Footer() {
                     <Stack varient='text' size='larger'>
                         <Button onClick={()=>navigate('/about')}>About</Button>
                         <Button onClick={()=>navigate('/guide')}>How it works</Button>
-                        <Button onClick={()=>navigate('/influencer')}>Influencer</Button>
+                        <Button onClick={()=>navigate('/user')}>Influencer</Button>
                         <Button onClick={()=>navigate('/contact')}>Contact</Button>
                     </Stack>
+                    {/* <Link to='/about'>About</Link>
+                    <Link to='/guide'>How It Works</Link>
+                    <Link to='/influencer'></Link> */}
                 </div>    
             </div>
-                <div class="main-div-42">
+                <div className="main-div-42">
                         <p><YouTubeIcon/></p>
                         <p><FacebookIcon/></p>
                         <p><InstagramIcon/></p>
@@ -45,7 +48,7 @@ function Footer() {
                 </div>
             </div>
 
-            <div class="footer-copyright">
+            <div className="footer-copyright">
                 <p>&copy; {CopyrightNotice} Influencer Hub. All rights reserved.</p>
                 <p>
                     The content, design, and graphics on this website are the intellectual property

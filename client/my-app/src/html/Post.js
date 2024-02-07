@@ -2,18 +2,6 @@ import React from 'react'
 import { Card, CardHeader, CardBody, CardFooter, Image, Stack, Heading, Text, Button } from '@chakra-ui/react'
 import { useNavigate } from 'react-router-dom'
 import Box_1 from './Box_1';
-import Box from '@mui/material/Box';
-import List from '@mui/material/List';
-import ListItem from '@mui/material/ListItem';
-import ListItemButton from '@mui/material/ListItemButton';
-import ListItemIcon from '@mui/material/ListItemIcon';
-import InboxIcon from '@mui/icons-material/Inbox';
-import MailIcon from '@mui/icons-material/Mail';
-import ListItemText from '@mui/material/ListItemText';
-import Divider from '@mui/material/Divider';
-import SwipeableDrawer from '@mui/material/SwipeableDrawer';
-import HomeIcon from '@mui/icons-material/Home';
-import DragIndicatorIcon from '@mui/icons-material/DragIndicator';
 import '../css/Post.css'
 import Navbar from './Navbar';
 import Footer from './Footer';
@@ -24,17 +12,17 @@ function Post() {
     return (
         <div>
             <Navbar/>
-            <div class="box-1">
+            <div className="box-1">
                 <Box_1/>
             </div>
-            <div class="main-div-9">
-                <div class="nevigation-section">
+            <div className="main-div-9">
+                <div className="nevigation-section">
                     <h1>Nevigate</h1>
                     <button id="nevigation-button" onClick={()=>navigate('/')}>Home</button>
                     <button id="nevigation-button" onClick={()=>navigate('/chat')}>Chat</button>
                     <button id="nevigation-button" onClick={()=>navigate('/profile')}>Profile</button>
                 </div>
-                <div class="cards">
+                <div className="cards">
                     <h1>Posts</h1>
                     <Card
                     id='card'

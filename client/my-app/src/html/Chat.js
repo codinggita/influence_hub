@@ -8,11 +8,11 @@ function Chat() {
     return (
         <div>
             <Navbar/>
-            <div class="box-1">
+            <div className="box-1">
                 <Box_1/>
             </div>
-            <div class="main-div-10">
-                <div class="chat-nevigation">
+            <div className="main-div-10">
+                <div className="chat-nevigation">
                     <h1>Chat Box</h1>
                     <div id="chat-card">
                         <img id="chat-logo" src='https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fGh1bWFufGVufDB8fDB8fHww' alt='chat logo'></img>
@@ -31,7 +31,7 @@ function Chat() {
                         <p><span>@radha09</span></p>
                     </div>
                 </div>
-                <div class="chat-section">
+                <div className="chat-section">
                     <div id="chat-display">
                         <div id="chat-reciever">
                             <h6>12:40 pm</h6>

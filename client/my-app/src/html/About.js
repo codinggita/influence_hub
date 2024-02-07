@@ -11,13 +11,13 @@ function About() {
     return (
         <div>
             <Navbar/>
-            <div class="box-1">
+            <div className="box-1">
                 <Box_1/>
             </div>
             <div>
             <div className="about-page">
                 <h1>Welcome to <span style={{ color: '#e74c3c' }}>Influencer Hub</span></h1>
-                <div class="about-content">
+                <div className="about-content">
                     <p>
                         Influencer Hub is not just a platform; it's a community that brings influencers and brands together. 
                         Our mission is to empower influencers to make a meaningful impact and help brands build authentic connections with their audience.

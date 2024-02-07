@@ -23,21 +23,25 @@ const App = () => {
 
   return (
     <div>
-      <Navbar/>
-      <div class="box-1">
-        <Box_1/>
+      <Navbar />
+      <div className="box-1">
+        <Box_1 />
       </div>
-      <div class="main-app-class">
-        <div class="compo-logic-1">
-          <Button id="btn9" varient='contained' onClick={() => handleButtonClick(1)}>Show Component One</Button>
-          <Button id="btn10" varient='contained' onClick={() => handleButtonClick(2)}>Show Component Two</Button>
+      <div className="main-app-class">
+        <div className="compo-logic-1">
+          <Button id="btn9" variant='contained' onClick={() => handleButtonClick(1)}>How to hire influencer</Button>
+          <Button id="btn10" variant='contained' onClick={() => handleButtonClick(2)}>How to contact team</Button>
         </div>
 
         {showComponentOne && <ComponentOne />}
         {showComponentTwo && <ComponentTwo />}
+
       </div>
-      <Footer/>
+      <Footer />
     </div>
+
   );
 };
+
+
 export default App;

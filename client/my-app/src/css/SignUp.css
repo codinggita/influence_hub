@@ -1,5 +1,9 @@
 @media (min-width:430px) {
     
+    *{
+        font-family: none;
+    }
+    
     #terms{
         margin-left: 20px;
         display: flex;

@@ -40,10 +40,10 @@ function AdminPage() {
     return (
         <div>
             <Navbar/>
-            <div class="box-1">
+            <div className="box-1">
                 <Box_1/>
             </div>
-                <div class="main-div-13">
+                <div className="main-div-13">
                     <div id='user-search'>
                         <h2>User Search</h2>
                         <form onSubmit={handleSearch}>

@@ -15,15 +15,15 @@ function Influencer() {
     return (
     <div>
         <Navbar/>
-        <div class="box-1">
+        <div className="box-1">
             <Box_1/>
         </div>
-        <div class="main-div-5">
+        <div className="main-div-5">
                 <h1>Top Influencer</h1>
                 <Button id="btn4" variant='contained' onClick={()=>navigate('/influencer')}>Find a influencer</Button>
                 <Button id="btn5" variant='outlined' onClick={()=>navigate('/team')}>Find a team</Button>
         </div>
-        <div class="main-div-6">
+        <div className="main-div-6">
             <div>
                     <form action="/search" method="get">
                         <div id="icon"><SearchIcon/></div>
@@ -33,11 +33,11 @@ function Influencer() {
                         {/* <TextField id="outlined-basic" label="Outlined" variant="outlined" /> */}
                         <Button id="btn6" varient='contained'>Search</Button>
                     </form>
-                    <div class="content-4">
+                    <div className="content-4">
                         <div class="filter">
                             <h1>Filters</h1>
                         </div>
-                        <div class="showcase">
+                        <div className="showcase">
                             <h1>Showcase</h1>
                             <div class="influencercard">
                                 <div id="info">
@@ -48,7 +48,7 @@ function Influencer() {
                                 </div>
                                 <div><img onClick={()=>navigate('/profile')} src='https://images.unsplash.com/photo-1658845489483-6d54f6d5a766?q=80&w=1742&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' alt='error'></img></div>
                             </div>
-                            <div class="influencercard">
+                            <div className="influencercard">
                                 <div id="info">
                                     <p>username</p>
                                     <p>location</p>
@@ -57,7 +57,7 @@ function Influencer() {
                                 </div>
                                 <div><img onClick={()=>navigate('/profile')} src='https://images.unsplash.com/photo-1658845489483-6d54f6d5a766?q=80&w=1742&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' alt='error'></img></div>
                             </div>
-                            <div class="influencercard">
+                            <div className="influencercard">
                                 <div id="info">
                                     <p>username</p>
                                     <p>location</p>
@@ -66,7 +66,7 @@ function Influencer() {
                                 </div>
                                 <div><img onClick={()=>navigate('/profile')} src='https://images.unsplash.com/photo-1658845489483-6d54f6d5a766?q=80&w=1742&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' alt='error'></img></div>
                             </div>
-                            <div class="influencercard">
+                            <div className="influencercard">
                                 <div id="info">
                                     <p>username</p>
                                     <p>location</p>
@@ -75,7 +75,7 @@ function Influencer() {
                                 </div>
                                 <div><img onClick={()=>navigate('/profile')} src='https://images.unsplash.com/photo-1658845489483-6d54f6d5a766?q=80&w=1742&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' alt='error'></img></div>
                             </div>
-                            <div class="influencercard">
+                            <div className="influencercard">
                                 <div id="info">
                                     <p>username</p>
                                     <p>location</p>
@@ -84,7 +84,7 @@ function Influencer() {
                                 </div>
                                 <div><img onClick={()=>navigate('/profile')} src='https://images.unsplash.com/photo-1658845489483-6d54f6d5a766?q=80&w=1742&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' alt='error'></img></div>
                             </div>
-                            <div class="influencercard">
+                            <div className="influencercard">
                                 <div id="info">
                                     <p>username</p>
                                     <p>location</p>

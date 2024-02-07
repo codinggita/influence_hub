@@ -1,10 +1,11 @@
-import React, { useState } from 'react'
+import React, { useState,useEffect } from 'react'
 import Navbar from './Navbar'
 import Box_1 from './Box_1'
 import Footer from './Footer'
 import Select from 'react-select';
 import '../css/ProfileDetails.css'
-import { Navigate, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
+import axios from 'axios';
 
 export default function ProfileDetails() {
 
@@ -32,39 +33,100 @@ export default function ProfileDetails() {
                     },
                     languages: [],
                 });
+
+                useEffect(() => {
+                    const fetchData = async () => {
+                        try {
+                            // Fetch user data from the backend
+                            const response = await axios.get('https://influence-hub.onrender.com/app/user/user1');
+                            setFormData(response.data); // Update the component state with the fetched user data
+                        } catch (error) {
+                            console.error('Error fetching user data:', error);
+                            // Handle error (e.g., display error message)
+                        }
+                    };
+            
+                    fetchData();
+                }, []); // Empty dependency array ensures useEffect runs only once when the component mounts
+
                 
-                // Handle input changes for basic information
-                const handleInputChange = (e) => {
-                    const { name, value } = e.target;
-                    setFormData((prevData) => ({
-                    ...prevData,
-                    [name]: value,
+                
+                
+                const handleCreate = event => {
+                    event.preventDefault();
+            
+                    axios.post('http://localhost:5000/app/user', formData)
+                        .then(response => {
+
+                            console.log('User created successfully:', response.data);
+                            alert('User created successfully!');
+                        })
+                        .catch(error => {
+                            console.error('Error creating user:', error);
+                        });
+                    };
+
+                    const handleUpdate = event => {
+                        event.preventDefault();
+                
+                        axios.put(`http://localhost:5000/app/user/${formData.username}`, formData)
+                            .then(response => {
+    
+                                console.log('User updated successfully:', response.data);
+                                alert('User update successfully!');
+                            })
+                            .catch(error => {
+                                console.error('Error updated user:', error);
+                            });
+                        };
+
+
+                const handleDelete = async () => {
+                    try {
+                        const response = await axios.delete(`http://localhost:5000/app/user/${formData.username}`);
+                        console.log('User deleted successfully:', response.data);
+                        handleClearForm();
+                    } catch (error) {
+                        if (error.response && error.response.status === 404) {
+                            console.log('User not found');
+                        } else {
+                            console.error('Error deleting user data:', error);
+                        }
+                    }
+                };
+                
+            
+                const handleInputChange = event => {
+                    const { name, value } = event.target;
+                    setFormData(prevState => ({
+                        ...prevState,
+                        [name]: value
+                    }));
+                };
+            
+                // For nested objects (e.g., address, company), you can use additional handleChange functions
+                const handleAddressChange = event => {
+                    const { name, value } = event.target;
+                    setFormData(prevState => ({
+                        ...prevState,
+                        address: {
+                            ...prevState.address,
+                            [name]: value
+                        }
+                    }));
+                };
+            
+                const handleCompanyChange = event => {
+                    const { name, value } = event.target;
+                    setFormData(prevState => ({
+                        ...prevState,
+                        company: {
+                            ...prevState.company,
+                            [name]: value
+                        }
                     }));
                 };
                 
-                // Handle input changes for address
-                const handleAddressChange = (e) => {
-                    const { name, value } = e.target;
-                    setFormData((prevData) => ({
-                    ...prevData,
-                    address: {
-                        ...prevData.address,
-                        [name]: value,
-                    },
-                    }));
-                };
-                
-                // Handle input changes for company details
-                const handleCompanyChange = (e) => {
-                    const { name, value } = e.target;
-                    setFormData((prevData) => ({
-                    ...prevData,
-                    company: {
-                        ...prevData.company,
-                        [name]: value,
-                    },
-                    }));
-                };
                 
                 // Handle language selection changes
                 const handleLanguagesChange = (selectedOptions) => {
@@ -75,41 +137,12 @@ export default function ProfileDetails() {
                     }));
                 };
                 
-                // Handle form submission
-                const handleSubmit = async (e) => {
-                    e.preventDefault();
-                
-                    try {
-                    // Send the form data to your backend API
-                    const response = await fetch('https://influence-hub.onrender.com/your-backend-endpoint', {
-                        method: 'POST',
-                        headers: {
-                        'Content-Type': 'application/json',
-                        },
-                        body: JSON.stringify(formData),
-                    });
-                
-                    if (!response.ok) {
-                        window.alert("cant submit")
-                        throw new Error('Network response was not ok');
-                    }
-                
-                    // Handle the success response from your backend
-                    const data = await response.json();
-                    console.log('Success:', data);
-                    window.alert('Sucessfully Submited');
-                    navigate('/');
-                    
-                    } catch (error) {
-                    // Handle errors
-                    window.alert(error);
-                    console.error('Error:', error);
-                    }
-                };
-                
                 // Clear the form data
                 const handleClearForm = () => {
                     setFormData({
+                    uername:'',
+                    email:'',
+                    password:'',
                     firstName: '',
                     lastName: '',
                     role: 'admin',
@@ -142,14 +175,45 @@ export default function ProfileDetails() {
     return (
         <div>
             <Navbar/>
-            <div class="box-1">
+            <div className="box-1">
                 <Box_1/>
             </div>
             <div>
-                    <div class="main-div-12">
+                    <div className="main-div-12">
                         <h2>Registration Form</h2>
-                            <form onSubmit={handleSubmit}>
+                            <form onSubmit={handleCreate}>
                             {/* Basic Information */}
+                            <label>
+                            Username:
+                            <input
+                                type="text"
+                                name="username"
+                                value={formData.username}
+                                onChange={handleInputChange}
+                                style={{ color: 'red' }}
+                            />
+                            </label>
+                            <br />
+                            <label>
+                            Email:
+                            <input
+                                type="text"
+                                name="email"
+                                value={formData.email}
+                                onChange={handleInputChange}
+                            />
+                            </label>
+                            <br />
+                            <label>
+                            Password:
+                            <input
+                                type="text"
+                                name="password"
+                                value={formData.password}
+                                onChange={handleInputChange}
+                            />
+                            </label>
+                            <br />
                             <label>
                             First Name:
                             <input
@@ -279,10 +343,13 @@ export default function ProfileDetails() {
                             value={languageOptions.filter((option) => formData.languages.includes(option.value))}
                             options={languageOptions}
                             onChange={handleLanguagesChange}
+                            id='languages-select'
                             />
                             <br />
                             <button type="button" onClick={handleClearForm} >Clear Form</button>   
                             <button type="submit" >Submit</button>
+                            <button type="button" onClick={handleUpdate}>Update User</button>
+                            <button type="button" onClick={handleDelete}>Delete</button>
                         </form>                
                     </div>
             </div>

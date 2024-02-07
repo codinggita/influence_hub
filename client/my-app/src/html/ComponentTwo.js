@@ -8,7 +8,7 @@ const ComponentTwo = () => {
     const navigate=new useNavigate();
     return (
         <div>
-            <div class="main-div-40">
+            <div className="main-div-40">
                 <div id="main-div-40-content-40">
                     <img src="https://images.unsplash.com/photo-1530811761207-8d9d22f0a141?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Y2hhdHxlbnwwfHwwfHx8MA%3D%3D" alt='error'></img>
                     <div id="top-content-1">
@@ -30,7 +30,7 @@ const ComponentTwo = () => {
                                 <h3>2. Take a concern with company</h3>
                                 <p>Finalize the rate at your mutual concern and start your promotion and get paid.</p>
                                 <Stack >
-                                    <Button variant='contained' onClick={()=>navigate('/teams')}>FIND TEAM</Button>
+                                    <Button variant='contained' onClick={()=>navigate('/user')}>FIND TEAM</Button>
                                 </Stack>
                             </div>
                         </div>                    

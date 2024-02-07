@@ -56,3 +56,14 @@
     background-color: black;
     box-shadow: 5px 5px 10px 0px rgb(255, 0, 153);   
 }
+
+#languages-select{
+    color: black;
+}
+
+input{
+    color: black;
+    font-style: normal;
+    font-family: none;
+    font-size: 18px;
+}

@@ -75,8 +75,8 @@ function Login() {
             };
 
     return (
-        <div class="main-div-7">
-            <div class="login-section">
+        <div className="main-div-7">
+            <div className="login-section">
                 <form onSubmit={handleSubmit}>
                     <input id='input-box' placeholder='Username'
                     type="text"

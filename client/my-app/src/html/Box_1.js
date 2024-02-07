@@ -9,7 +9,7 @@ import { useNavigate } from 'react-router-dom';
 function Box_1() {
     const navigate=new useNavigate();
     return (
-    <div class="main-div-2">
+    <div className="main-div-2">
         <Stack spacing={3} direction='row'>                
                 <Button variant='text' size='large' onClick={()=>navigate('/influencer')}>HIRE INFLUENCERS</Button>
                 <Button variant='text' size='large' onClick={()=>navigate('/about')}>ABOUT US</Button>

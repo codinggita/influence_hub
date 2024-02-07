@@ -8,7 +8,7 @@ function ProfileCard() {
 
     return (
         <div>
-            <div class="influencercard">
+            <div className="influencercard">
                 <div id="info">
                     <p>username</p>
                     <p>location</p>

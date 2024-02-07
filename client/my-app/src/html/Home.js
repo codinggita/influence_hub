@@ -11,10 +11,10 @@ function Home() {
     return (
         <div>
             <Navbar/>
-            <div class="box-1">
+            <div className="box-1">
                 <Box_1/>
             </div>
-            <div class="main-div-4">
+            <div className="main-div-4">
                 <div>
                     <img id='bg-img-1' src="https://images.unsplash.com/photo-1504704911898-68304a7d2807?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OTR8fG5lb24lMjB2fGVufDB8fDB8fHww" alt='error'></img>
                     <div id="content-1">

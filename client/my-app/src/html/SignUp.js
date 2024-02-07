@@ -55,8 +55,8 @@ function SignUp() {
 
 
     return (
-        <div class="main-div-7" >
-            <div class="signup-section">
+        <div className="main-div-7" >
+            <div className="signup-section">
                 <form id="main-div-7" onSubmit={handleSignup}>
                     
                     <input type="text"

@@ -8,12 +8,12 @@ function Features() {
     return (
         <div>
             <Navbar/>
-            <div class="box-1">
+            <div className="box-1">
                 <Box_1/>
             </div>
-            <div class="main-div-11">
+            <div className="main-div-11">
                     <h2>Key Features of My Website</h2>
-                    <ul class="features-ul">
+                    <ul className="features-ul">
                         <li id="heading">User Authentication</li>
                         <ul>
                             <img id="image-section" src='https://images.unsplash.com/photo-1612810806563-4cb8265db55f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mjh8fGxvZ298ZW58MHx8MHx8fDA%3D' alt='img'></img>

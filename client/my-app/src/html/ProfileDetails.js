@@ -7,7 +7,11 @@ import '../css/ProfileDetails.css'
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 
+const domain =process.env.REACT_APP_DOMAIN;
+
 export default function ProfileDetails() {
+    
+    console.log(domain);
 
     const navigate=new useNavigate();
 
@@ -38,7 +42,7 @@ export default function ProfileDetails() {
                     const fetchData = async () => {
                         try {
                             // Fetch user data from the backend
-                            const response = await axios.get('https://influence-hub.onrender.com/app/user/user1');
+                            const response = await axios.get(`${domain}/app/user/user1`);
                             setFormData(response.data); // Update the component state with the fetched user data
                         } catch (error) {
                             console.error('Error fetching user data:', error);
@@ -55,7 +59,7 @@ export default function ProfileDetails() {
                 const handleCreate = event => {
                     event.preventDefault();
             
-                    axios.post('http://localhost:5000/app/user', formData)
+                    axios.post(`${domain}/app/user`, formData)
                         .then(response => {
 
                             console.log('User created successfully:', response.data);
@@ -69,7 +73,7 @@ export default function ProfileDetails() {
                     const handleUpdate = event => {
                         event.preventDefault();
                 
-                        axios.put(`http://localhost:5000/app/user/${formData.username}`, formData)
+                        axios.put(`${domain}/app/user/${formData.username}`, formData)
                             .then(response => {
     
                                 console.log('User updated successfully:', response.data);
@@ -83,7 +87,7 @@ export default function ProfileDetails() {
 
                 const handleDelete = async () => {
                     try {
-                        const response = await axios.delete(`http://localhost:5000/app/user/${formData.username}`);
+                        const response = await axios.delete(`${domain}/app/user/${formData.username}`);
                         console.log('User deleted successfully:', response.data);
                         handleClearForm();
                     } catch (error) {

@@ -4,16 +4,25 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 const bcrypt = require('bcrypt'); // Import the bcrypt package
 
-const app = express();
-const PORT = 5000;
+require("dotenv").config();
 
-mongoose.connect('mongodb+srv://ry9826653:123456789987654321@cluster0.q1bdkdy.mongodb.net/app', { useNewUrlParser: true, useUnifiedTopology: true });
+
+const app = express();
+const PORT = process.env.PORT;
+const mongourl=process.env.MONGOURL;
+
+mongoose.connect(`${mongourl}`, { useNewUrlParser: true, useUnifiedTopology: true });
 const db = mongoose.connection;
+
+console.log(PORT);
+console.log(mongourl);
+
 
 db.on('error', console.error.bind(console, 'MongoDB connection error:'));
     db.once('open', () => {
     console.log('Connected to MongoDB');
 });
+
 
 const userSchema = new mongoose.Schema({
     username: String,

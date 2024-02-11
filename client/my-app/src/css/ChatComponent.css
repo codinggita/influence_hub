@@ -1,0 +1,16 @@
+@media (min-width:430px) {
+    .chat-container{
+        height: 80vh;
+        margin: 20px;
+        border: 1px solid white;
+        border-radius: .6rem;
+        padding: 20px;
+        display: flex;
+    }
+
+    .chat-box-button{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+}

@@ -10,8 +10,8 @@
     }
 
     .chat-nevigation{
-        width: 22vw;
-        height: 70vh;
+        width: 26vw;
+        /* height: 70vh; */
         box-shadow: 5px 5px 10px 0px rgb(255, 255, 255);    
         display: flex;
         flex-direction: column;
@@ -62,7 +62,7 @@
         background-color: rgba(255, 255, 255, 0.4);
         padding: 8px;
         margin-bottom: 40px;
-        width: 48vw;
+        width: 38vw;
         border-radius: .6rem;
         border: 1px solid white;
         display: flex;
@@ -99,6 +99,36 @@
         height: 40px;
         width: 40px;
         border-radius: 50%;
+    }
+
+    .form-chat-room{
+        background-color: rgb(124, 124, 124);
+        position: absolute;
+        top: 80vh;
+        left: 40vw;
+        height: 30vh;
+        width: 30vw;
+        z-index: 50;
+        display: flex;
+        flex-direction: column;
+        padding: 40px;
+        border-radius: 3rem;
+        box-shadow: 5px 5px 10px 0px rgb(255, 255, 255);    
+    }
+
+    .chat-buttons{
+        display: flex;
+        flex-direction: column;
+        gap: 2vh;
+    }
+
+    .chat-buttons button{
+        border: 2px solid white;
+        border-radius: .6rem;
+        background-color: black;
+        color: white;
+        padding: 10px;
+        margin-bottom: 15px;
     }
 
 }

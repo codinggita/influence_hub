@@ -2,7 +2,7 @@ import React from 'react'
 import { useNavigate } from 'react-router-dom'
 import '../css/ProfileCard.css'
 
-function ProfileCard() {
+function ProfileCard ({ user }) {
 
     const navigate=new useNavigate();
 
@@ -10,13 +10,15 @@ function ProfileCard() {
         <div>
             <div className="influencercard">
                 <div id="info">
-                    <p>username</p>
-                    <p>location</p>
-                    <p>link</p>
-                    <p>Description</p>
+                    <h2>{user.username}</h2>
+                    <p>{user.email}</p>
+                    <p>{user.address.country}</p>
+                    <p>{user.description}</p>
+                    <p>{user.role}</p>
+                    <p>{user.language}</p>
                     </div>
                     <div>
-                        <img onClick={()=>navigate('/profile')} src='https://images.unsplash.com/photo-1658845489483-6d54f6d5a766?q=80&w=1742&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' alt='error'></img>
+                        <img onClick={()=>navigate(`/profile/?username=${user.username}`)} src={user.profilephoto} alt='error'></img>
                     </div>
                 </div>
         </div>

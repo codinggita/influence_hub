@@ -2,56 +2,86 @@ import React, { useState } from 'react'
 import { Button } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
 import '../css/SignUp.css'
+import axios from 'axios';
+
+const domain=process.env.REACT_APP_DOMAIN;
 
 
 function SignUp() {
     const navigate=new useNavigate();
 
+    // const [formData, setFormData] = useState({
+    //     username: '',
+    //     email: '',
+    //     password: ''
+    // });
     const [formData, setFormData] = useState({
-        username: '',
-        email: '',
-        password: '',
+        profilephoto:'',
+        username:'',
+        email:'',
+        password:'',
+        firstName: '',
+        lastName: '',
+        role: 'admin',
+        address: {
+            section: '',
+            city: '',
+            postalCode: '',
+            state: '',
+            country: 'default',
+        },
+        company: {
+            companyName: '',
+            timezone: '',
+            location: 'default',
+        },
+        languages: [],
+        description: '',
+        rememberMe: false,
     });
 
     const handleInputChange = (e) => {
-        setFormData({
-        ...formData,
-        [e.target.name]: e.target.value,
-        });
-    };
+        const { name, value } = e.target;
+        setFormData(prevState => ({
+            ...prevState,
+            [name]: value
+        }));
 
+        setFormData(prevState => ({
+            ...prevState,
+            address: {
+                ...prevState.address,
+                [name]: 'default'
+                }
+            }));
+            
+        setFormData(prevState => ({
+            ...prevState,
+            company: {
+                ...prevState.address,
+                [name]: 'default'
+                }
+            }));
+    };
 
     const handleSignup = async (e) => {
         e.preventDefault();
-    
-        try {
-            const response = await fetch('https://influence-hub.onrender.com/app/user/signup', {
-                method: 'POST',
-                headers: {
-                'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(formData),
-            });
         
-            if (response.ok) {
-                // Handle successful signup, e.g., redirect to login page
-                console.log('User successfully registered');
-                navigate('/');
+        // if (!formData.rememberMe) {
+        //     alert('Please check the "User aggrement" checkbox before attempting to log in.');
+        //     return;
+        //     }
 
-            } else {
-                const data = await response.json();
-                if (data.message.includes('Email is already registered') || data.message.includes('Username is already registered')) {
-                // Display an alert message
-                window.alert(data.message);
-                } else {
-                // Handle other errors
-                console.error('Failed to register user:', data.message);
-                }
-            }
-            } catch (error) {
-            console.error('Error during signup:', error);
-            }
-        };
+        try {
+            // Make a POST request to the signup endpoint
+            const response = await axios.post(`${domain}/app/user/signup`, formData);
+            console.log('Signup successful:', response.data);
+
+            navigate(`/?username=${formData.username}`);
+        } catch (error) {
+            console.error('Error signing up:', error);
+        }
+    };
 
 
     return (

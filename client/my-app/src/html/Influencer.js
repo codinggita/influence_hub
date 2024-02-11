@@ -1,17 +1,45 @@
-import React from 'react'
-import { useNavigate } from 'react-router-dom';
+import React, { useEffect, useState  } from 'react';
 import SearchIcon from '@mui/icons-material/Search';
 import PlaceIcon from '@mui/icons-material/Place';
 import '../css/Influencer.css'
 import Box_1 from './Box_1';
+import ProfileCard from './ProfileCard';
 import { Button } from '@mui/material';
 import Navbar from './Navbar';
 import Footer from './Footer';
 
+import ChatCard from './ChatCard';
+import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
+
+const domain=process.env.REACT_APP_DOMAIN;
 
 
 function Influencer() {
+
     const navigate=new useNavigate();
+
+    const [users, setUsers] = useState([]);
+    const [searchedUser, setSearchedUser] = useState(null);
+
+
+    useEffect(() => {
+        const fetchUsers = async () => {
+            try {
+                // Make a GET request to fetch all users
+                const response = await axios.get(`${domain}/app/user`);
+                console.log(response.data);
+                setUsers(response.data);
+                console.log("sucessfully fetched the users");
+            } catch (error) {
+                console.error('Error fetching users:', error);
+            }
+        };
+
+        fetchUsers();
+    }, []);
+
+
     return (
     <div>
         <Navbar/>
@@ -20,8 +48,8 @@ function Influencer() {
         </div>
         <div className="main-div-5">
                 <h1>Top Influencer</h1>
-                <Button id="btn4" variant='contained' onClick={()=>navigate('/influencer')}>Find a influencer</Button>
-                <Button id="btn5" variant='outlined' onClick={()=>navigate('/team')}>Find a team</Button>
+                <Button id="btn4" variant='contained' onClick={()=>navigate('/user')}>Find a influencer</Button>
+                <Button id="btn5" variant='outlined' onClick={()=>navigate('/user')}>Find a team</Button>
         </div>
         <div className="main-div-6">
             <div>
@@ -30,7 +58,6 @@ function Influencer() {
                         <input for="word" type='text' placeholder='Search Keyword'></input>
                         <div id="icon"><PlaceIcon/></div>
                         <input for="location" type='text' placeholder='Location'></input>
-                        {/* <TextField id="outlined-basic" label="Outlined" variant="outlined" /> */}
                         <Button id="btn6" varient='contained'>Search</Button>
                     </form>
                     <div className="content-4">
@@ -39,63 +66,11 @@ function Influencer() {
                         </div>
                         <div className="showcase">
                             <h1>Showcase</h1>
-                            <div class="influencercard">
-                                <div id="info">
-                                    <p>username</p>
-                                    <p>location</p>
-                                    <p>link</p>
-                                    <p>Description</p>
-                                </div>
-                                <div><img onClick={()=>navigate('/profile')} src='https://images.unsplash.com/photo-1658845489483-6d54f6d5a766?q=80&w=1742&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' alt='error'></img></div>
-                            </div>
-                            <div className="influencercard">
-                                <div id="info">
-                                    <p>username</p>
-                                    <p>location</p>
-                                    <p>link</p>
-                                    <p>Description</p>
-                                </div>
-                                <div><img onClick={()=>navigate('/profile')} src='https://images.unsplash.com/photo-1658845489483-6d54f6d5a766?q=80&w=1742&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' alt='error'></img></div>
-                            </div>
-                            <div className="influencercard">
-                                <div id="info">
-                                    <p>username</p>
-                                    <p>location</p>
-                                    <p>link</p>
-                                    <p>Description</p>
-                                </div>
-                                <div><img onClick={()=>navigate('/profile')} src='https://images.unsplash.com/photo-1658845489483-6d54f6d5a766?q=80&w=1742&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' alt='error'></img></div>
-                            </div>
-                            <div className="influencercard">
-                                <div id="info">
-                                    <p>username</p>
-                                    <p>location</p>
-                                    <p>link</p>
-                                    <p>Description</p>
-                                </div>
-                                <div><img onClick={()=>navigate('/profile')} src='https://images.unsplash.com/photo-1658845489483-6d54f6d5a766?q=80&w=1742&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' alt='error'></img></div>
-                            </div>
-                            <div className="influencercard">
-                                <div id="info">
-                                    <p>username</p>
-                                    <p>location</p>
-                                    <p>link</p>
-                                    <p>Description</p>
-                                </div>
-                                <div><img onClick={()=>navigate('/profile')} src='https://images.unsplash.com/photo-1658845489483-6d54f6d5a766?q=80&w=1742&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' alt='error'></img></div>
-                            </div>
-                            <div className="influencercard">
-                                <div id="info">
-                                    <p>username</p>
-                                    <p>location</p>
-                                    <p>link</p>
-                                    <p>Description</p>
-                                </div>
-                                <div><img onClick={()=>navigate('/profile')} src='https://images.unsplash.com/photo-1658845489483-6d54f6d5a766?q=80&w=1742&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' alt='error'></img></div>
+                            {users.map(user => (
+                                <ProfileCard key={user.username} user={user} />
+                                ))}
                             </div>
                         </div>
-                        </div>
-                    {/* </div> */}
             </div>
         </div>
         <Footer/>

@@ -4,7 +4,7 @@
         background-image: url(https://images.unsplash.com/photo-1546640646-89b557854b23?q=80&w=1738&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
         background-repeat: no-repeat;
         background-size: 81rem 40rem;
-        filter: brightness(.6);
+        /* filter: brightness(.6); */
         background-color: black;
     }
 
@@ -120,19 +120,53 @@
         margin-top: 10vh;
         margin-left: 20vh;
         margin-bottom: 20vh;
-        background-color: rgba(215, 242, 250, 0.116);
-        height: 80vh;
+        background-color: rgba(255, 255, 255, 0.732);
+        /* height: 80vh; */
         width: 40vw;
         display: flex;
         flex-direction: column;
         align-items: center;
         border-radius: .6rem;
-        border-top: 1px solid white;
+        border-top: 1px solid rgb(0, 0, 0);
         box-shadow: 5px 5px 10px 0px rgb(255, 255, 255);
-        color: white;
+        color: rgb(0, 0, 0);
         font-style: italic;
         font-family: cursive;
     }
+
+    .post-add form{
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        font-size: larger;
+    }
+
+    .post-add form label{
+        font-size: 30px;
+        font-weight: 800;
+    }
+
+    .post-add form input{
+        padding: 5px;
+        height: 5vh;
+        font-size: larger;
+        border-radius: .6rem;
+    }
+
+    .post-add form textarea{
+        padding: 20px;
+        height: 10vh;
+        font-size: 20px;
+        font-weight: 700;
+        border-radius: .6rem;
+    }
+
+    .circle-image {
+        margin: 20px;
+        width: 40vw; /* Adjust as needed */
+        height: 40vh; /* Adjust as needed */
+        object-fit: cover; /* Ensure image fills the circle */
+    }      
 
 }
 

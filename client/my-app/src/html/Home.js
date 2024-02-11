@@ -1,5 +1,5 @@
 import { Button, Stack } from '@mui/material'
-import { useNavigate } from 'react-router-dom';
+import { useNavigate ,useLocation } from 'react-router-dom';
 import React from 'react'
 import '../css/Home.css'
 import Box_1 from './Box_1';
@@ -8,6 +8,8 @@ import Footer from './Footer';
 
 function Home() {
     const navigate=new useNavigate();
+
+
     return (
         <div>
             <Navbar/>
